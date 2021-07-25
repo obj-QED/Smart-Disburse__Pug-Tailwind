@@ -1,0 +1,59 @@
+/* purgecss start ignore */
+
+.bg-home {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.bg-home:before {
+  content: '';
+  background: url("../img/notification__background__conctain.svg") no-repeat;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .bg-home:before {
+    content: url("../img/notification__background.svg");
+    background: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .bg-home:before {
+    top: -32px;
+    left: -340px;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 414px) {
+  .bg-home:before {
+    left: -338px;
+  }
+}
+
+@media (max-width: 375px) {
+  .bg-home:before {
+    top: -8px;
+    left: -302px;
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 360px) {
+  .bg-home:before {
+    left: -306px;
+    top: -4px;
+    transform: scale(0.65);
+    opacity: 0.8;
+  }
+}
+
+/* purgecss end ignore */

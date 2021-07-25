@@ -1,0 +1,34 @@
+//- Navigation btn
+mixin list(classItem, classPoint)
+    li.item(class= classItem class= classPoint)
+        block
+.heading-nav.py-5.px-4
+    .heading-nav__arrow
+        ul.heading-nav__point.flex.justify-end.items-center.py-5.relative.border-before.bg-gray-50.bg-opacity-5.rounded-lg
+            //- Use
+            +list('mr-3')
+                a.flex.items-center.cursor-default
+                    span.border-point-active.block.w-20p.h-20p.border-5.border-solid.relative.bg-white.rounded-full
+            +list('mr-3 opacity-30')
+                a.flex.items-center.cursor-default
+                    span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                        span.h-2.w-2.bg-gray-300.rounded-full
+            +list('mr-3 opacity-30')
+                a.flex.items-center.cursor-default
+                    span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                        span.h-2.w-2.bg-gray-300.rounded-full
+            +list('mr-3 opacity-30')
+                a.flex.items-center.cursor-default
+                    span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                        span.h-2.w-2.bg-gray-300.rounded-full
+            +list('mr-3 opacity-30')
+                a.flex.items-center.cursor-default
+                    span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                        span.h-2.w-2.bg-gray-300.rounded-full
+            //- Preview Point (List deteled opacity-30 & children span change class bg-gray-300 to bg-white)
+            //- +list('mr-3')
+            //-     a.flex.items-center.cursor-default
+            //-         span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+            //-             span.h-2.w-2.bg-white.rounded-full
+            svg.heading-nav__arrow-back.cursor-pointer.h-6.w-6.text-white.absolute.left-4(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 19l-7-7m0 0l7-7m-7 7h18')

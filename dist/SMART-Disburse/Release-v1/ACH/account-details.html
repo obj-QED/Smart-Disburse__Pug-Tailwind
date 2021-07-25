@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link href="../../css/tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../img/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="max-w-screen-lg m-auto font-inter container relative bg-gray-100">
+  <div class="step md:flex md:bg-none bg-dark-blue relative  md:max-h-full">
+    <div class="heading md:hidden">
+      <div class="heading-nav py-5 px-4">
+        <div class="heading-nav__arrow">
+          <ul class="heading-nav__point flex justify-end items-center py-5 relative border-before bg-gray-50 bg-opacity-5 rounded-lg">
+                  <li class="item mr-3"><a class="flex items-center cursor-default"><span class="border-point-active block w-20p h-20p border-5 border-solid relative bg-white rounded-full"></span></a>
+                  </li>
+                  <li class="item mr-3 opacity-30"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full"><span class="h-2 w-2 bg-gray-300 rounded-full"></span></span></a>
+                  </li>
+                  <li class="item mr-3 opacity-30"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full"><span class="h-2 w-2 bg-gray-300 rounded-full"></span></span></a>
+                  </li>
+                  <li class="item mr-3 opacity-30"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full"><span class="h-2 w-2 bg-gray-300 rounded-full"></span></span></a>
+                  </li>
+                  <li class="item mr-3 opacity-30"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full"><span class="h-2 w-2 bg-gray-300 rounded-full"></span></span></a>
+                  </li>
+            <svg class="heading-nav__arrow-back cursor-pointer h-6 w-6 text-white absolute left-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menu bg-menu justify-center flex-wrap min-h-screen hidden md:w-4/12 md:flex">
+      <div class="sticky flex justify-between flex-col h-full max-h-screen top-0 min-w-220p md:pt-10 md:pb-14  lg:pt-14 lg:pb-18">
+        <div class="block">
+          <div class="nav-accordion flex justify-end mb-9 cursor-pointer">
+            <div class="nav-accordion__btn bg-opacity-10 bg-black rounded-lg w-11 h-11 min-h-11 flex items-center justify-center hover:bg-black hover:bg-opacity-30">
+              <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M18.6709 15.8289L15.1834 13.8033L8.12004 17.9137L18.5088 23.9562C18.666 24.0449 18.8625 23.9956 18.9558 23.8379C18.9853 23.7886 19 23.7295 19 23.6703L19 16.4007C19 16.1641 18.8772 15.9472 18.6709 15.8289Z" fill="white"></path>
+                <path d="M18.6709 10.171C18.8772 10.0527 19 9.83588 19 9.59931L19 2.32963C19 2.27048 18.9853 2.21134 18.9558 2.16205C18.8674 2.00434 18.666 1.95505 18.5088 2.04377L6.92153 8.78116C6.81838 8.8403 6.75453 8.94873 6.74961 9.06702L6.74961 17.1006L18.6709 10.171Z" fill="white"></path>
+              </svg>
+            </div>
+          </div>
+          <ul class="menu-nav">
+                  <li class="item flex mb-6 items-center"><a class="flex items-center cursor-default">
+                      <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg><span class="text-sm font-medium text-white ml-4">Confirm Identity</span></a>
+                  </li>
+                  <li class="item flex mb-6 items-center"><a class="flex items-center cursor-default">
+                      <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg><span class="text-sm font-medium text-white ml-4">Review Documents</span></a>
+                  </li>
+                  <li class="item mb-6"><a class="flex items-center cursor-default">
+                      <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg><span class="text-sm font-medium text-white ml-4">Provide Signature</span></a>
+                  </li>
+                  <li class="item mb-6"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center"><span class="absolute h-4 w-4 rounded-full bg-white bg-opacity-10"></span><span class="relative block w-2 h-2 bg-white rounded-full"></span></span><span class="text-sm font-medium text-white ml-4">Receive Payment</span></a>
+                  </li>
+                  <li class="item flex mb-6 items-center opacity-30"><a class="flex items-center cursor-default"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full">
+                        <div class="span h-2 w-2 bg-gray-300 rounded-full"></div></span><span class="text-sm font-medium text-white ml-4">Complete Payment</span></a>
+                  </li>
+          </ul>
+        </div>
+        <div class="copyright flex items-end justify-center w-full"><img class="min-w-max" src="../../img/logo__copyright.svg" alt="logo footer" srcset=""><span class="font-medium text-xs mx-1 text-white opacity-40">Powered by</span><a href="https://www.transcard.com/" target="_blank"><img src="../../img/logo__transcard__white.svg" alt="Transcard" srcset=""></a></div>
+      </div>
+    </div>
+    <section class="flex flex-col justify-between content bg-white rounded-tl-20p rounded-tr-20p min-h-80vh md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14">
+      <div class="step-block">
+        <div class="step-block__nav hidden items-start justify-between mb-11 md:flex"><a class="cursor-default flex items-center pt-4 border-t-2 border-primary-blue w-1/2" aria-current="step" x-description="Current Step"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true"><span class="absolute h-4 w-4 rounded-full bg-primary-blue opacity-20"></span><span class="relative block w-2 h-2 bg-primary-blue rounded-full"></span></span><span class="ml-2 text-sm font-medium leading-4 text-gray-800">Bank Details</span></a><a class="cursor-default flex items-center pt-4 border-t-2 border-gray-200 w-1/2 lg:items-center md:items-start" aria-current="step" x-description="Next Step"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true"><span class="absolute h-4 w-4 rounded-full bg-transparent"></span><span class="relative block w-2 h-2 bg-gray-200 rounded-full"></span></span><span class="ml-2 text-sm font-medium leading-4 text-gray-800">Account Information</span></a><a class="cursor-default flex items-center pt-4 border-t-2 border-gray-200 w-1/2" aria-current="step" x-description="Next Step"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true"><span class="absolute h-4 w-4 rounded-full bg-transparent"></span><span class="relative block w-2 h-2 bg-gray-200 rounded-full"></span></span><span class="ml-2 text-sm font-medium leading-4 text-gray-800">Summary</span></a></div>
+        <div class="info">
+          <div class="info__title">
+            <h1 class="text-3xl font-normal text-gray-800"><span>Enter Your</span><br><span class="font-semibold">Bank Account Details</span>
+            </h1>
+          </div>
+          <div class="info__content text-sm text-gray-500 font-normal mt-4 mb-4"><span><b class="font-semibold">[amount]</b> will be deposited to your bank account</span>
+          </div>
+        </div>
+        <div class="info-body">
+          <div class="block"><img src="../../img/check-sample.svg" alt="" srcset=""></div>
+          <form class="mt-6">
+            <div class="mb-4 text-gray-700 text-sm leading-5 font-medium">Account type</div>
+            <div class="mt-4 mb-6 flex items-center">
+              <div class="flex items-center mr-9">
+                <input class="h-4 w-4 text-primary-light-blue border-gray-300 focus:ring-primary-light-blue" id="push_checking" name="push_notifications" type="radio">
+                <label class="ml-2" for="push_checking"><span class="block text-base font-medium text-gray-700">Checking</span></label>
+              </div>
+              <div class="flex items-center">
+                <input class="h-4 w-4 text-primary-light-blue border-gray-300 focus:ring-primary-light-blue" id="push_savings" name="push_notifications" type="radio">
+                <label class="ml-2" for="push_savings"><span class="block text-base font-medium text-gray-700">Savings</span></label>
+              </div>
+            </div>
+            <div class="flex justify-start flex-wrap mt-4">
+              <label class="mb-1 block text-sm font-medium text-gray-700" for="holder-name">Account Holder Name </label>
+              <div class="relative sm:col-span-2 w-full">
+                <input class="py-2 px-3 block w-full shadow-sm border border-gray-300 rounded-md text-gray-800  focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500" id="holder-name" type="text" name="holder-name" autocomplete="given-name">
+              </div>
+            </div>
+            <div class="flex justify-start flex-wrap mt-4">
+              <label class="mb-1 block text-sm font-medium text-gray-700" for="routing_number">Routing Number </label>
+              <div class="relative sm:col-span-2 w-full flex items-center">
+                <input class="py-2 px-3 block w-full shadow-sm border border-gray-300 rounded-md text-gray-800  focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500" id="routing_number" type="text" name="routing_number" autocomplete="given-name">
+                <div class="ml-2 md:hidden block"><img src="../../img/card-action.svg" alt="" srcset=""></div>
+              </div>
+            </div>
+            <div class="flex justify-start flex-wrap mt-4">
+              <label class="mb-1 block text-sm font-medium text-gray-700" for="account_number">Account Number </label>
+              <div class="relative sm:col-span-2 w-full">
+                <input class="py-2 px-3 block w-full shadow-sm border border-gray-300 rounded-md text-gray-800  focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500" id="account_number" type="text" name="account_number" autocomplete="given-name">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="w-full pt-6 pb-6 md:pb-0 md:mt-0 mt-4">
+        <button class="btn-step-next justify-center inline-flex items-center px-6 w-full shadow-form text-base font-medium text-white rounded-md bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 md:hidden" style="min-height:50px" type="button">Next
+          <svg class="h-5 w-5 text-white ml-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </button>
+        <div class="justify-between items-center md:mt-16 hidden md:flex">
+          <button class="mr-auto bg-white border border-gray-300 justify-center inline-flex items-center px-6 w-full shadow-sm text-base font-medium text-gray-700 rounded-md hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 mr-6" type="button">Back</button>
+          <button class="btn-step-next justify-center inline-flex items-center px-6 w-full shadow-form text-base font-medium text-white rounded-md bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3" style="min-height:50px" type="button">Next
+            <svg class="h-5 w-5 text-white ml-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mt-8 text-center md:mb-3.5"><a class="text-sm leading-5 font-normal text-primary-blue text-center hover:opacity-80" href="">
+             Route using my <b class="font-semibold"> debit card number</b></a></div>
+      </div>
+    </section>
+  </div>
+  <div class="block md:mt-24 md:hidden">
+    <footer class="footer py-5 w-full bg-white relative md:hidden md:mt-0 -mt-0.5">
+      <div class="copyright flex items-center justify-center"><img class="min-w-max" src="../../img/logo__copyright.svg" alt="logo footer" srcset=""><span class="font-medium text-xs mx-1">Powered by</span><a href="https://www.transcard.com/" target="_blank"><img src="../../img/logo__transcard.svg" alt="Transcard" srcset=""></a></div>
+    </footer>
+  </div>
+  <div class="modal modal-summary fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="display: none">
+    <div class="flex items-center justify-center min-h-screen py-4 px-4 text-center sm:block sm:p-0">
+      <div class="fixed inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity" aria-hidden="true"></div><span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">​</span>
+      <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6">
+        <div class="close p-3 w-12 h-12 cursor-pointer">
+          <svg class="text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </div>
+        <div class="title inline-flex w-full flex-wrap text-center">
+          <div class="w-full text-sm leading-8 font-normal text-gray-400 mb-2">Here's a Sample</div>
+          <h3 class="w-full text-3xl leading-9 font-normal text-gray-800" id="modal-title">Virtual Card</h3>
+        </div>
+        <div class="card mt-6 mb-10"><img class="shadow-card m-auto" src="../../img/card.png" alt="card" srcset=""></div>
+        <div class="info bg-gray-50 rounded-md py-5 px-6 text-gray-500 text-sm leading-5 font-normal text-center">Instantly created virtual cards allow for easy spend and online money management. <br/> <br/> Once created, you'll be able to save your card details through a file, or by adding it to a digital wallet, and use it to spend your money online, or where wallets are accepted. 
+          <div class="mt-4"><a href="">
+              <div class="text-xs leading-4 font-normal text-primary-blue hover:opacity-90"> Terms & Conditions</div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../../js/script.min.js"></script>

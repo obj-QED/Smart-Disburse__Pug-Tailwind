@@ -1,0 +1,21 @@
+.inset-0.fixed.z-10.overflow-y-auto.inset-0(aria-labelledby='modal-title' role='dialog' aria-modal='true')
+    .max-w-inherit.flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
+        // backdrop-blur backdrop-filter
+        .fixed.inset-0.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true') 
+        span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
+        .max-w-inherit.inline-block.align-bottom.bg-white.rounded-lg.px-4.pt-5.pb-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='sm:my-8 sm:align-middle sm:max-w-lg sm:w-auto sm:p-6 sm:mx-4 sm:mt-20')
+            .flex.flex-wrap(class='sm:flex sm:items-center sm:justify-center')
+                .mx-auto.flex-shrink-0.flex.items-center.justify-center.h-12.w-12.rounded-full.bg-red-50(class='sm:mx-0 sm:h-10 sm:w-10')
+                    svg.h-6.w-6.text-red-500(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' aria-hidden='true')
+                        path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z')
+                .mt-3.text-center
+                    h3#modal-title.text-lg.leading-6.font-medium.text-gray-900(class="w-9/12 m-auto")
+                        | Account Information doesn’t match!
+                    .mt-2
+                        p.text-sm.text-gray-500
+                            | Your <b class="font-semibold">Bank Details Information</b> don’t match with your <b class="font-semibold">Account  Information.</b> Please make sure all the details are accurate.
+            .mt-5.flex.flex-wrap(class='sm:mt-5')
+                button.btn-step-next.px-6.py-4.w-full.shadow-sm.text-base.font-medium.text-white.rounded-md.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-80 m-auto block' type='button')
+                    | I understand
+                button.mt-4.w-full.inline-flex.justify-center.rounded-md.border.border-gray-300.shadow-sm.px-6.py-4.bg-white.text-base.font-medium.text-gray-700(type='button' class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue sm:mt-4 md:w-80 m-auto block')
+                    | Edit Bank Account Details

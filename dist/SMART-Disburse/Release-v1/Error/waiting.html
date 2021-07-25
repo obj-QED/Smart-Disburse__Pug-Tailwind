@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link href="../../css/tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../img/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="max-w-screen-lg min-h-screen container mx-auto font-inter relative bg-gray-100">
+  <div class="fixed inset-0 z-10 overflow-y-auto inset-0">
+    <div class="text-center max-w-inherit flex items-center justify-center min-h-screen py-4 px-4 sm:block sm:p-0">
+      <div class="fixed inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity"></div>
+      <div class="hidden sm:inline-block sm:align-middle sm:h-screen"></div>
+      <div class="bg-white rounded-lg overflow-hidden max-w-inherit inline-block align-bottom shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-auto md:p-14 md:py-14 px-4 py-11 sm:mx-4 sm:mt-20 md:w-full w-full" style="max-width:540px">
+        <div class="flex justify-center items-center md:bg-transparent bg-gray-50">
+          <div class="waiting bg-white rounded-lg w-full md:mx-0">
+            <div class="title text-gray-900 text-lg leading-6 font-medium">Your request is being processed…</div><img class="m-auto py-8" src="../../img/ajax-loading.png" alt="loading" srcset="">
+            <div class="text text-gray-900 text-lg leading-6 font-medium"> Please wait</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../../js/script.min.js"></script>
+</body>

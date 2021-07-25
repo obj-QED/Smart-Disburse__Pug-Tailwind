@@ -1,0 +1,21 @@
+.modal.modal-summary.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true' style="display: none")
+    .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
+        .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
+        span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
+        .inline-block.align-bottom.bg-white.rounded-lg.px-4.pt-5.pb-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
+            .close.p-3.w-12.h-12.cursor-pointer
+                svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                    path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+            .title.inline-flex.w-full.flex-wrap.text-center
+                .w-full.text-sm.leading-8.font-normal.text-gray-400.mb-2
+                    | Here's a Sample
+                h3#modal-title.w-full.text-3xl.leading-9.font-normal.text-gray-800
+                    | Virtual Card
+            .card.mt-6.mb-10
+                img.shadow-card.m-auto(src="../../img/card.png", alt="card", srcset="")
+            .info.bg-gray-50.rounded-md.py-5.px-6.text-gray-500.text-sm.leading-5.font-normal.text-center
+                | Instantly created virtual cards allow for easy spend and online money management. <br/> <br/> Once created, you'll be able to save your card details through a file, or by adding it to a digital wallet, and use it to spend your money online, or where wallets are accepted. 
+                .mt-4
+                    a(href="")
+                        .text-xs.leading-4.font-normal.text-primary-blue(class="hover:opacity-90")
+                            |  Terms & Conditions

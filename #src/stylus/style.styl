@@ -1,0 +1,238 @@
+@import 'home.styl'
+
+html
+    &::-webkit-scrollbar 
+        width 0
+
+@layer base {
+    @css {
+    .pb-18 {
+        padding-bottom: 4.5rem
+    }
+    @media (min-width: 1024px) {
+        .lg\:pb-18 {
+            padding-bottom: 4.5rem;
+        }
+    }
+    @media(max-width:767px) {
+    .bg-dark-blue:before {
+        content: '';
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        bottom: -1px;
+    }
+    }
+}
+    /* width */
+    .attachment .attachment-list::-webkit-scrollbar {
+        width: 2px;
+        border-radius: 2px;
+    }
+
+    /* Track */
+    .attachment .attachment-list::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 2px;
+    }
+
+    /* Handle */
+    .attachment .attachment-list::-webkit-scrollbar-thumb {
+        background: #9CA3AF;
+        border-radius: 2px;
+        height:60%
+    }
+}
+@layer utilities {
+    .bg-balance {
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.nav-accordion
+    &__btn
+        &:hover
+            svg
+                path
+                    fill #3671FB
+.text-parts-hide
+    -webkit-line-clamp 1
+    -webkit-box-orient vertical
+    overflow hidden
+    max-width 265px
+    text-overflow ellipsis
+.modal__contact-form
+    &::-webkit-scrollbar 
+        width 0
+
+.content-gr-mobile
+    @media(max-width:767px)
+        &:before
+            content ''
+            background linear-gradient(180deg, #ECFDF5 0%, rgba(236, 253, 245, 0) 64.67%)
+            width 100%
+            height 35%
+            position absolute
+            top 0
+            left 0
+            z-index 1
+.content-gr-mobile
+    position relative
+    .step-block
+        z-index 10
+    @media(min-width:768px)
+        &:before
+            content ''
+            background linear-gradient(180deg, #ECFDF5 0%, rgba(236, 253, 245, 0) 14.1%)
+            width 100%
+            height 100%
+            position absolute
+            top 0
+            left 0
+            z-index 1
+.hide-scroll::-webkit-scrollbar 
+    width 0
+@layer base {
+    @css {
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');    
+    }
+}
+
+@media(min-width:1024px)
+    .virtual-card
+        // Uncommit   
+        width: 525px;
+        height: 336px;
+        margin: 0 auto;
+
+.virtual-card
+    display flex
+    flex-flow row wrap
+    justify-content flex-start
+    font-family Roboto Mono
+    background linear-gradient(180deg, #1E326F 0%, #090C38 100%)
+    color #fff
+    padding 20px
+    width 100%
+    height 100%
+    position relative
+    margin 0
+    box-shadow 0px 20px 50px -12px rgba(0, 0, 0, 0.25)
+    color #fff !important
+    border-radius 10px
+    /* Deteled down */
+    width 380px
+    margin 0 auto
+    & > div
+        position relative
+    .cvv
+        order -5
+        display flex
+        justify-content flex-end
+        width 100%
+        font-size 12px
+        font-style normal
+        font-weight 400
+        line-height 16px
+        letter-spacing 0em
+        height 17px
+        padding-right 7px
+        &:before
+            content ''
+            background rgba(255, 255, 255, 0.2)
+            width 80px
+            height 100%
+            right 0
+            top 0
+            position absolute
+            border-radius 40px
+    .card-financial-type
+        order -4
+        width 100%
+        font-family Roboto Mono
+        font-size 12px
+        font-style normal
+        font-weight 600
+        line-height 16px
+        letter-spacing 0px
+        width 100%
+        display flex
+        justify-content flex-end
+        max-height 18px
+        margin-top 44px
+    .pan
+        order -3
+        padding 0
+        font-family Roboto Mono
+        font-size 22px
+        font-style normal
+        font-weight 400
+        line-height 25px
+        letter-spacing 0em
+        width 100%
+    .expiration
+        order -2
+        width 100%
+        justify-content center
+        margin-top 11px
+        font-size 14px
+        font-style normal
+        font-weight 400
+        line-height 17px
+        letter-spacing 0em
+        div
+            &:first-child
+                font-family Roboto Mono
+                font-size 10px
+                font-style normal
+                font-weight 600
+                line-height 11px
+                letter-spacing 0em
+                margin-right 8px
+    .cardholder-name
+        font-family Roboto Mono
+        font-size 14px
+        font-style normal
+        font-weight 600
+        line-height 18px
+        letter-spacing 0em
+        text-align left
+        height 18px
+        order -1
+        width 100%
+        margin-top 25px
+    .card-association-logo
+        width 52px
+        height 32px
+        position absolute
+        right 20px
+        bottom 20px
+        img
+            object-fit cover
+            width 100%
+            height 100%
+
+.notification
+    &:before
+        content ''
+        position absolute
+        top -8px
+        left -8px
+        background #ffffff0d
+        width calc(100% + 16px)
+        height calc(100% + 16px)
+        border-radius 16px
+    .text
+        &::-webkit-scrollbar
+            width 3px
+        &::-webkit-scrollbar-track
+            background rgba(17, 24, 39, 0.3)
+            border-radius 30px
+        &::-webkit-scrollbar-thumb
+            background #FFFFFF
+            border-radius 1.5px
+            &:hover
+                background rgb(255 255 255 / .9)

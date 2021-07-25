@@ -1,0 +1,68 @@
+//- Navigation btn
+mixin list(classItem, classPoint)
+    li.item(class= classItem class= classPoint)
+        block
+        
+.heading(class="md:hidden")
+    .heading-nav.py-5.px-4
+        .heading-nav__arrow
+            ul.heading-nav__point.flex.justify-end.items-center.py-5.relative.border-before.bg-gray-50.bg-opacity-5.rounded-lg
+                //- Use
+                +list('mr-3')
+                    .flex.items-center
+                        span.border-point-active.block.w-20p.h-20p.border-5.border-solid.relative.bg-white.rounded-full
+                +list('mr-3 opacity-30')
+                    .flex.items-center.cursor-default
+                        span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                            span.h-2.w-2.bg-gray-300.rounded-full
+                +list('mr-3 opacity-30')
+                    .flex.items-center.cursor-default
+                        span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                            span.h-2.w-2.bg-gray-300.rounded-full
+                +list('mr-3 opacity-30')
+                    .flex.items-center.cursor-default
+                        span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                            span.h-2.w-2.bg-gray-300.rounded-full
+                +list('mr-3 opacity-30')
+                    .flex.items-center.cursor-default
+                        span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center.bg-transparent.rounded-full
+                            span.h-2.w-2.bg-gray-300.rounded-full
+                svg.heading-nav__arrow-back.cursor-pointer.h-6.w-6.text-white.absolute.left-4(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                    path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 19l-7-7m0 0l7-7m-7 7h18')
+.menu.bg-menu.justify-center.flex-wrap.min-h-screen.hidden(class="md:w-4/12 md:flex")
+    .sticky.flex.justify-between.flex-col.h-full.max-h-screen.top-0.min-w-220p(class="md:pt-10 md:pb-14  lg:pt-14 lg:pb-18")
+        .block
+            include ../#parts/menu__accordion.pug
+            ul.menu-nav
+                +list('mb-6')
+                    a.flex.items-center.cursor-default
+                        span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center")
+                            span(class="absolute h-4 w-4 rounded-full bg-white bg-opacity-10")
+                            span(class="relative block w-2 h-2 bg-white rounded-full")
+                        span(class="text-sm font-medium text-white ml-4") Confirm Identity
+                +list('mb-6 opacity-30')
+                    .flex.items-center.cursor-default
+                        span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
+                            .span(class="h-2 w-2 bg-gray-300 rounded-full")
+                        span(class="text-sm font-medium text-white ml-4") Review Documents
+                +list('mb-6 opacity-30')
+                    .flex.items-center.cursor-default
+                        span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
+                            .span(class="h-2 w-2 bg-gray-300 rounded-full")
+                        span(class="text-sm font-medium text-white ml-4") Provide Signature
+                +list('mb-6 opacity-30')
+                    .flex.items-center.cursor-default
+                        span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
+                            .span(class="h-2 w-2 bg-gray-300 rounded-full")
+                        span(class="text-sm font-medium text-white ml-4") Receive Payment
+                +list('flex mb-6 items-center opacity-30')
+                    .flex.items-center.cursor-default
+                        span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
+                            .span(class="h-2 w-2 bg-gray-300 rounded-full")
+                        span(class="text-sm font-medium text-white ml-4") Complete Payment
+        .copyright.flex.items-center.justify-center.w-full
+            img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
+            span.font-medium.text-xs.mx-1.text-white.opacity-40
+                | Powered by
+            a(href="https://www.transcard.com/" target="_blank")
+                img(src="../../img/logo__transcard__white.svg", alt="Transcard", srcset="")

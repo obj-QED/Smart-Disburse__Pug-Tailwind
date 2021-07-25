@@ -1,0 +1,22 @@
+mixin content-block
+    .flex(class="justify-center items-center md:bg-transparent bg-gray-50")
+        .waiting.bg-white.rounded-lg(class="w-full md:mx-0")
+            .title.text-gray-900.text-lg.leading-6.font-medium
+                | Your request is being processed…
+            img.m-auto.py-8(src="../../img/ajax-loading.png", alt="loading", srcset="")
+            .text.text-gray-900.text-lg.leading-6.font-medium
+                |  Please wait
+
+
+doctype html
+include ../#includes/meta.pug
+//- .container.relative.bg-gray-100
+body.max-w-screen-lg.min-h-screen.container.mx-auto.font-inter.relative(class="bg-gray-100")
+    .fixed(class="inset-0 z-10 overflow-y-auto inset-0")
+        .text-center(class="max-w-inherit flex items-center justify-center min-h-screen py-4 px-4 sm:block sm:p-0")
+            .fixed(class="inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity")
+            .hidden(class="sm:inline-block sm:align-middle sm:h-screen")
+            .bg-white.rounded-lg.overflow-hidden(class="max-w-inherit inline-block align-bottom shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-auto md:p-14 md:py-14 px-4 py-11 sm:mx-4 sm:mt-20 md:w-full w-full" style="max-width:540px")
+                +content-block
+
+    include ../#includes/scripts.pug
