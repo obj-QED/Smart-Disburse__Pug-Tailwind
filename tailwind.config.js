@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('autoprefixer'),
   ],
   // presets: [],
   darkMode: false, // or 'media' or 'class'
@@ -30,7 +31,7 @@ module.exports = {
       white: colors.white,
       gray: colors.coolGray,
       blue: colors.blue,
-      green: colors.green,
+      green: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
       primary: {
@@ -826,7 +827,8 @@ module.exports = {
       '8p': '8px',
       '68': '17rem',
       '80': '20rem',
-      '500px': '500px'
+      '500px': '500px',
+      '[1px]': '1px'
     }),
     zIndex: {
       auto: 'auto',

@@ -2,8 +2,8 @@
 <div>
     <span>Versioning board: </span><a href="https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=72%3A0">https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=72%3A0</a>
     <ul>
-        <li>Mobile v1.03:<a href="https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=7901%3A34148"> https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=7901%3A34148</a></li>
-        <li>Desctop v1.03:<a href="https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=7901%3A72888">https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=7901%3A72888</a></li>
+        <li>Mobile v1.04:<a href="https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versioning-Smart-Disbursements?node-id=8261%3A7264"> https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versioning-Smart-Disbursements?node-id=8261%3A7264</a></li>
+        <li>Desctop v1.04:<a href="https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versioning-Smart-Disbursements?node-id=8261%3A14120">https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versioning-Smart-Disbursements?node-id=8261%3A14120</a></li>
     </ul>
 </div>
 <h2><a class="anchor" id="user-content-the-source-of-truth-is-the-design-in-figma" aria-hidden="true" href="#the-source-of-truth-is-the-design-in-figma"> </a>Sitemap Release 1</h2>

@@ -104,10 +104,10 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                             .text-xs.leading-4.font-medium.text-gray-500 Contact Info
                             .text-sm.leading-5.font-normal.text-gray-900.w-40 +1 (555) 987-6543
                             .text-sm.leading-5.font-normal.text-gray-900.w-40 sample@mail.com
-                    .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
-                        .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                            .text-xs.leading-4.font-medium.text-gray-500 Payer
-                            .text-sm.leading-5.font-normal.text-gray-900.w-40 Your Company
+                    //- .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
+                    //-     .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+                    //-         .text-xs.leading-4.font-medium.text-gray-500 Payer
+                    //-         .text-sm.leading-5.font-normal.text-gray-900.w-40 Your Company
                     .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
                         .line.w-full.border-dashed.border-b.pb-3.border-gray-300
                             .text-xs.leading-4.font-medium.text-gray-500 Date
@@ -122,7 +122,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                                 | [ClientName]
 
                 
-            .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4")
+            .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4 z-10")
                 .w-full.js-next-step(class="mt-9")
                     button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
                         | Done
@@ -139,5 +139,4 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 
             .block(class="md:mt-24 md:hidden")
                 include ../#includes/footer.pug
-    include ../#parts/modal-VC.pug
 include ../#includes/scripts.pug

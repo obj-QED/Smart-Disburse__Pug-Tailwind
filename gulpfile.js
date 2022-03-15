@@ -46,8 +46,7 @@ webpcss = require("gulp-webpcss");
 pug = require('gulp-pug');
 tailwindcss = require('tailwindcss');
 tw_forms = require('@tailwindcss/forms')
-// svgSprite = require('gulp-svg-sprite')
-postcss = require('gulp-postcss')
+const postcss = require('gulp-postcss');
 
 function browserSync(params) {
     browsersync.init({
@@ -62,12 +61,11 @@ function browserSync(params) {
 function html() {
     return src(path.src.html)
         .pipe(fileinclude())
+        //.pipe(webphtml()) // TODO: not working with old mixins and mixins in mixins
         .pipe(pug({
             doctype: 'html',
             pretty: true,
         }))
-        .pipe(dest(path.build.html))
-        .pipe(webphtml())
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
@@ -91,7 +89,6 @@ function images() {
                 optimizationLevel: 3 // 0 to 7
             })
         )
-        // .pipe(src(path.src.img))
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }
@@ -107,7 +104,7 @@ function css() {
         .pipe(webpcss())
         .pipe(postcss([
             tailwindcss('./tailwind.config.js'),
-            auto_prefixer,
+            require('autoprefixer'),
         ]))
         .pipe(dest(path.build.css))
         .pipe(clean_css())
@@ -138,7 +135,18 @@ function js() {
 function clean(params) {
     return del(path.clean);
 }
-
+gulp.task('svgSprite', function () {
+    return gulp.src([source_folder + '/icons/*.svg'])
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: "../icons/icon.svg", //Название файла для спрайтов
+                    example: true
+                },
+            }
+        }))
+        .pipe(dest(path.build.img))
+})
 
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);

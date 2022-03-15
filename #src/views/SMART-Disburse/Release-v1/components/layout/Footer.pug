@@ -1,0 +1,72 @@
+mixin Footer(mode, desktop)
+    div(
+        class=[
+            'items-center justify-center flex-wrap',
+            mode === 'dark' ? 'flex pb-4 mt-6' : 'md:flex',
+            !desktop && mode === 'dark' && 'md:hidden',
+            attributes.class
+        ]
+    )
+        // transcard
+        div(class="flex justify-center flex-grow items-start w-full py-4")
+            div(class="flex items-center")
+                +imgTranscardShield()(
+                    class=[
+                        'w-4.5 h-4.5',
+                        mode !== 'dark' && 'js-footer-shield'
+                    ]
+                )
+                div(
+                    class=[
+                        'ml-1 text-xs leading-4 font-medium',
+                        mode === 'dark' ? 'text-gray-800' : 'text-white opacity-40 js-footer-powered'
+                    ]
+                )
+                    | Powered by
+            +imgTranscard()(
+                class=[
+                    'ml-1',
+                    mode === 'dark' ? 'text-[#090C38]' : 'text-white js-footer-transcard'
+                ]
+            )
+        // terms
+        if mode === 'dark'
+            +FooterLanguage(mode)(class="mr-1")
+
+            hr(
+                class=[
+                    'h-5 w-[1px] border-none',
+                    mode === 'dark' ? 'bg-gray-200' : 'bg-white bg-opacity-20 js-footer-separator'
+                ]
+            )
+
+        else
+            div(class="w-full flex justify-center mb-2 mt-4")
+                +FooterLanguage(mode)
+
+        div(class="flex items-center")
+            a(
+                class=[
+                    'w-28 p-2 text-xs leading-4 font-medium text-center cursor-pointer',
+                    mode === 'dark' ? 'text-gray-500 hover:text-gray-700' : 'text-white opacity-40 hover:opacity-100'
+                ]
+                href="#"
+            )
+                | Terms of Use
+
+            hr(
+                class=[
+                    'h-5 w-[1px] border-none',
+                    mode === 'dark' ? 'bg-gray-200' : 'bg-white bg-opacity-20 js-footer-separator'
+                ]
+            )
+
+            // privacy
+            a(
+                class=[
+                    'w-28 p-2 text-xs leading-4 font-medium text-center cursor-pointer',
+                    mode === 'dark' ? 'text-gray-500 hover:text-gray-700' : 'text-white opacity-40 hover:opacity-100'
+                ]
+                href="#"
+            )
+                | Privacy Policy

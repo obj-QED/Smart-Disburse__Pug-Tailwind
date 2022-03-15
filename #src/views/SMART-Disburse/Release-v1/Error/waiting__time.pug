@@ -1,12 +1,21 @@
 mixin content-block
     .flex(class="justify-center items-center md:bg-transparent bg-gray-50")
         .waiting.bg-white.rounded-lg(class="w-full md:mx-0")
-            img.m-auto.mb-9(src="../../img/ajax-loading.png", alt="loading", srcset="")
-            .time.text-xl.leading-7.font-semibold.text-gray-900.mb-4
-                | 02:13
-            .text.text-sm.leading-5.font-normal.text-gray-800
-                | Your sessions will automatically expire due to inactivity.
-            button.mt-9.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-white.rounded-md.bg-primary-light-blue.py-4(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-full' type='button')
+            .title.text-xl.leading-7.font-semibold.mb-4.text-gray-900
+                |  Session Timeout
+            .text.text-sm.leading-5.font-normal.text-gray-800.my-4
+                | You session will expire in:
+            .time.text-black.text-5xl.leading-none.font-extrabold.tracking-tight.flex.justify-center.items-center.mt-6.mb-9
+                .hour
+                    span.bg-gray-50.border.border-gray-200.shadow-sm.rounded-md(class="px-1.5 py-2.5 mr-1") 0
+                    span.bg-gray-50.border.border-gray-200.shadow-sm.rounded-md(class="px-1.5 py-2.5") 2
+                span(class="mx-2.5") :
+                .minute
+                    span.bg-gray-50.border.border-gray-200.shadow-sm.rounded-md(class="px-1.5 py-2.5 mr-1") 1
+                    span.bg-gray-50.border.border-gray-200.shadow-sm.rounded-md(class="px-1.5 py-2.5") 3
+            .text.text-sm.leading-5.font-normal.text-gray-800.my-9
+                | Select "Continue" to stay connected.
+            button.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-white.rounded-md.bg-primary-light-blue.py-4(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-full' type='button')
                 | Continue
 
 doctype html
