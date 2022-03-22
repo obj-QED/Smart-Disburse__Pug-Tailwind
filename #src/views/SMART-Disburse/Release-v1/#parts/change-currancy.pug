@@ -1,0 +1,55 @@
+.modal.modal-summary.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
+  .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
+    .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
+    span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
+    .inline-block.align-bottom.bg-white.rounded-lg.px-4.py-6.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
+      .close.p-3.w-12.h-12.cursor-pointer
+        svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+          path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+      div(class="md:px-10")
+        .mt-3.text-center(class='sm:mt-5')
+          h3#modal-title.text-lg.leading-6.font-medium.text-gray-900
+            | Sending your money to
+          .text.text-sm.leading-5.font-normal.text-gray-500.mt-2 Please select the country where you want to receive your <b>[PaymentTypeText]</b> and a supported currency
+        .flex.items-center.flex-wrap.mt-6.mb-3.border-gray-300.rounded-lg.border.py-6.px-4
+          .flex.justify-start.flex-wrap.w-full
+            .block.text-sm.font-medium.text-gray-700(for='City') Country
+            #City.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue')
+              svg(xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewbox='0 0 28 20' fill='none')
+                rect(x='0.25' y='0.25' width='27.5' height='19.5' rx='1.75' fill='white' stroke='#F5F5F5' stroke-width='0.5')
+                mask#mask0_9835_45980(style='mask-type:alpha' maskunits='userSpaceOnUse' x='0' y='0' width='28' height='20')
+                  rect(x='0.25' y='0.25' width='27.5' height='19.5' rx='1.75' fill='white' stroke='white' stroke-width='0.5')
+                g(mask='url(#mask0_9835_45980)')
+                  rect(x='18.668' width='9.33333' height='20' fill='#E43D4C')
+                  path(fill-rule='evenodd' clip-rule='evenodd' d='M0 20H9.33333V0H0V20Z' fill='#1BB65D')
+              span.ml-3.text-base.text-gray-900(class="sm:text-sm") Italy
+              svg(xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewbox='0 0 10 6' fill='none' class='absolute right-5')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683416 -0.097631 1.31658 -0.097631 1.7071 0.292893L4.99999 3.58579L8.29288 0.292893C8.6834 -0.0976311 9.31657 -0.0976311 9.70709 0.292893C10.0976 0.683417 10.0976 1.31658 9.70709 1.70711L5.7071 5.70711C5.31657 6.09763 4.68341 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z' fill='#6B7280')
+
+          .flex.justify-start.flex-wrap.mt-4.w-full
+            label.block.text-sm.font-medium.text-gray-400(for='City') Currancy
+            select#City.mt-1.block.w-full.pl-3.pr-10.py-2.text-base.bg-gray-100.border-gray-300.rounded-md.text-gray-500(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+              option(hidden disabled value)
+              option(selected) USD
+              option EUR
+
+          .info.mt-4.w-full
+            .inline-flex.justify-between.w-full
+              span.text-sm.leading-5.font-normal.text-gray-500 Conversion rate:
+              span.text-gray-500.font-medium.text-sm.font-semibold.leading-5 1 USD = 0.88 EUR
+            .inline-flex.justify-between.w-full.mt-2
+              span.text-sm.leading-5.font-normal.text-gray-500 Originating amount:
+              span.text-gray-500.font-medium.text-sm.font-semibold.leading-5 $1,734.58
+            .inline-flex.justify-between.w-full.mt-2
+              span.text-sm.leading-5.font-normal.text-gray-500 Converted amount:
+              span.text-gray-500.font-medium.text-sm.font-semibold.leading-5 €1,526.43
+
+        .notice.p-4.bg-blue-50.rounded-md.flex
+          svg.text-blue-400.h-5.w-6(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill='currentColor')
+            path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z' clip-rule='evenodd')
+          span.text-blue-800.text-sm.leading-5.font-medium.ml-3 Instantly issued Virtual Card is not available in xxx country.
+        .mt-9
+          button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')
+            | Go to bank transfer
+          button.border.border-gray-300.mt-4.justify-center.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue  w-full mt-4 flex' style='max-height:56px' type='button')
+            span.inline-flex Cancel

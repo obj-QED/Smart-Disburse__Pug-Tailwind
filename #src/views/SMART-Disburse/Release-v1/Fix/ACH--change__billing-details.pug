@@ -1,0 +1,141 @@
+//- Info
+//- Title
+mixin info__title()
+  .info__title
+    h1.text-3xl.font-normal.text-gray-800
+      block
+//- Body
+mixin info__content()
+  .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
+    block
+
+doctype html
+include ../#includes/meta.pug
+
+body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
+  .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
+    //- Navigation btn
+    mixin list(classItem, classPoint)
+      li.item(class= classItem class= classPoint)
+        block
+
+    .heading(class="md:hidden")
+      include ../#parts/navigation-step--mobile.pug
+    .hidden(class="md:block menu bg-menu justify-center flex-wrap min-h-screen hidden md:w-4/12 md:flex")
+      //- Navigation btn
+      mixin list(classItem, classPoint)
+        li.item(class= classItem class= classPoint)
+          block
+
+      include ../#parts/navigation-step.pug
+
+    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
+      .step-block
+        .step-block__nav.hidden.items-start.justify-between.mb-11(class="md:flex")
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Current Step' class="w-1/2")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              svg.h-4.w-4.text-primary-blue(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
+                path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Bank Details
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Current Step' class="w-1/2  md:items-start lg:items-center")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              span.absolute.h-4.w-4.rounded-full.bg-primary-blue.opacity-20
+              span.relative.block.w-2.h-2.bg-primary-blue.rounded-full
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Account Information
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-gray-200( aria-current='step' x-description='Next Step' class="w-1/2")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              span.absolute.h-4.w-4.rounded-full.bg-transparent
+              span.relative.block.w-2.h-2.bg-gray-200.rounded-full
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
+
+        .block(class="md:hidden")
+          include ../#parts/change-money--italy
+
+        .info
+          +info__title()
+            span Review <b class="font-bold">Account Information</b>
+          +info__content()
+            span Please fill in or edit your account information
+        form.form.mt-6
+          .border.border-gray-200.rounded-10p.p-4.mt-4
+            .flex.justify-start.flex-wrap
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
+                | Address Line 1
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_2') 
+                span.mr-1 Address Line 2
+                span.font-normal.opacity-20 (optional)
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+
+            .flex.justify-start.flex-wrap.mt-4
+              label.block.text-sm.font-medium.text-gray-400(for='City') Country
+              select#City.mt-1.block.w-full.pl-3.pr-10.py-2.opacity-70.bg-gray-100.border-gray-300.rounded-md.text-gray-400(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                option(hidden disabled value)
+                option(selected) Italy
+                option Canada
+                option EU
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='City') City
+              input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+            .flex.justify-start.flex-wrap.mt-4
+              label.block.text-sm.font-medium.text-gray-700(for='City') State
+              select#City.mt-1.block.w-full.pl-3.pr-10.py-2.text-base.border-gray-300.rounded-md(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                option(hidden disabled selected value)
+                option USA
+                option Canada
+                option EU
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='postal') 
+                span.mr-1 ZIP Code
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+
+
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
+                | Date of Birth
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' placeholder="MM - DD - YYYY" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
+                | SSN (Social Security Number)
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' placeholder="AAA - GG - SSSS" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+          .border.border-gray-200.rounded-10p.p-4.mt-4
+            .block
+              label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
+              .mt-1.relative.rounded-md.shadow-sm
+                .absolute.inset-y-0.left-0.flex.items-center
+                  label.sr-only(for='country') Country
+                  select#country-mini.h-full.py-0.pl-3.pr-7.border-transparent.bg-transparent.text-gray-500.rounded-md(name='country' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                    option US
+                    option CA
+                    option EU
+                input#phone_number.block.w-full.pl-16.border-gray-300.rounded-md(type='text' name='phone_number' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm' placeholder='+1 (555) 987-6543')
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
+                | Email
+              .relative(class='sm:col-span-2 w-full')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+
+      .w-full.pt-6.pb-6(class="md:pb-0 md:mt-0 mt-4")
+        button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 md:hidden' style='min-height:50px' type='button')
+          | Next
+          svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+            path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
+        .justify-between.items-center(class="md:mt-16 hidden md:flex")
+          button.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-md(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 mr-6' type='button')
+            | Back
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3' style='min-height:50px' type='button')
+            | Next
+            svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+              path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
+        .mt-8.text-center(class="md:mb-3.5")
+          a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
+            | Route using my <b class="font-semibold">debit card number</b>
+  include ../#includes/footer.pug
+include ../#includes/scripts.pug

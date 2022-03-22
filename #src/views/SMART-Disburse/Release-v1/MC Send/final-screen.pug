@@ -1,142 +1,104 @@
 //- Info
 //- Title
 mixin info__title()
-    .info__title
-            h1.text-3xl.font-normal.text-gray-800
-                block
+  .info__title
+    h1.text-3xl.font-normal.text-gray-800
+      block
 //- Body
 mixin info__content()
-    .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
-            block
+  .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
+    block
 
 doctype html
 include ../#includes/meta.pug
 
 body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
-    .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
-        //- Navigation btn
-        mixin list(classItem, classPoint)
-            li.item(class= classItem class= classPoint)
-                block
-        // Hidden mobile  
-        .heading(class="hidden")
-            include ../#parts/navigation-step--mobile.pug
-        .menu.bg-menu.justify-center.flex-wrap.min-h-screen.hidden(class="md:w-4/12 md:flex")
-            .sticky.flex.justify-between.flex-col.h-full.max-h-screen.top-0.min-w-220p(class="md:pt-10 md:pb-14  lg:pt-14 lg:pb-18")
-                .block
-                    include ../#parts/menu__accordion.pug
-                    ul.menu-nav
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Confirm Identity
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Review Documents
-                        +list('mb-6')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Provide Signature
-                        +list('mb-6')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Receive Payment
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Complete Payment
-                .copyright.flex.items-end.justify-center.w-full
-                    img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
-                    span.font-medium.text-xs.mx-1.text-white.opacity-40
-                        | Powered by
-                    a(href="https://www.transcard.com/" target="_blank")
-                        img(src="../../img/logo__transcard__white.svg", alt="Transcard", srcset="")
-        // Deteled class .rounded-tl-20p.rounded-tr-20p
-        section.flex.flex-col.justify-between.content.bg-white.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14 content-gr-mobile")
-            .step-block
-                .info.flex.justify-center.flex-wrap.text-center
-                    span.infline-flex.w-full.mb-2
-                        img.m-auto(src="../../img/check.svg", alt="", srcset="", width="45px" height="45px")
-                    +info__title()
-                        | Successfully Submitted!
-                .balance.mt-6.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative.z-10
-                    .text.uppercase.text-blue-200.text-xs.leading-5.font-medium.pt-6.ww-full Payment Amount
-                    .cash.font-normal.text-5xl.text-white.py-3.w-full $1,734<span class="opacity-50">.58</span>
-                    .company.bg-blue-800.rounded-14p.py-1.pl-4.pr-1.mb-7.mt-3.cursor-default.leading-5(class="flex items-center")
-                        span.text-blue-400.text-xs.font-medium.uppercase Estimated Processing Time:
-                        span.inline-flex.items-center.rounded-full.text-xs.font-normal.text-white(class='px-2 py-0.5')
-                            |   Instant
-                .summary__info--v2.m-auto(class="-mt-3 md:w-80 w-11/12 bg-summary-info md:min-w-350p" style="background-size: 100% 100%; background-position: center; background-repeat: no-repeat;")
-                    .inline-flex.items-center.rounded-md.w-full.pt-9.pb-3.px-6
-                        .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                            .mb-3(class="mt-0.5")
-                                svg(xmlns='http://www.w3.org/2000/svg' width='49' height='32' viewBox='0 0 49 32' fill='none')
-                                    rect(width='49' height='32' rx='6' fill='#111827')
-                                    path(d='M19.9961 8.13232H28.7889V23.8676H19.9961V8.13232Z' fill='#F16022')
-                                    path(d='M20.5186 16C20.5186 12.8382 22.0089 9.97059 24.3934 8.13235C22.6795 6.80882 20.5186 6 18.1341 6C12.5454 6 8 10.4853 8 16C8 21.5147 12.5454 26 18.1341 26C20.5186 26 22.6795 25.1912 24.3934 23.8676C22.0089 22.0294 20.5186 19.1618 20.5186 16Z' fill='#E91D25')
-                                    path(d='M40.7879 16C40.7879 21.5147 36.2425 26 30.6538 26C28.2693 26 26.1084 25.1912 24.3945 23.8676C26.779 22.0294 28.2693 19.2353 28.2693 16C28.2693 12.8382 26.779 9.97059 24.3945 8.13235C26.1084 6.80882 28.2693 6 30.6538 6C36.2425 6 40.7879 10.4853 40.7879 16Z' fill='#F69E1E')
-                                    path(d='M38.2051 24.1583V23.9985H38.9583V24.1583H38.6775V24.9156H38.4859V24.1583H38.2051Z' fill='#F69E1E')
-                                    path(d='M39.0823 23.9985H39.3215L39.574 24.6147H39.5848L39.8373 23.9985H40.0765V24.9156H39.8884V24.3187H39.8808L39.6434 24.9111H39.5154L39.278 24.3164H39.2704V24.9156H39.0823V23.9985Z' fill='#F69E1E')
-                            .text-sm.leading-5.font-normal.text-gray-900 Mastercard ending in 4242
-                            .text-xs.leading-4.font-medium.text-gray-500(class="mt-0.5") Expires 12/24
-                            .text-xs.leading-4.font-medium.text-gray-500(class="mt-0.5") Johnny Anderson
-                    .inline-flex.items-center.flex-wrap.rounded-md.w-full.pb-3.px-6
-                        .inline-flex.items-center.rounded-md.w-full.pb-3
-                            .line.w-full.pb-1.border-gray-300
-                                .text-xs.leading-4.font-medium.text-gray-500 Billing Address
-                                .text-sm.leading-5.font-normal.text-gray-900 47 Anyviller RD NW #2 <br> Anytown AZ 01234
-                        .inline-flex.items-center.rounded-md.w-full.pb-3
-                            .line.w-full.pb-1.border-gray-300
-                                .text-xs.leading-4.font-medium.text-gray-500 Date of Birth
-                                .text-sm.leading-5.font-normal.text-gray-900 MM - DD - YYYY
-                        .inline-flex.items-center.rounded-md.w-full
-                            .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                                .text-xs.leading-4.font-medium.text-gray-500 SSN (Social Security Number)
-                                .text-sm.leading-5.font-normal.text-gray-900 ending in SSSS
-                    .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
-                        .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                            .text-xs.leading-4.font-medium.text-gray-500 Contact Info
-                            .text-sm.leading-5.font-normal.text-gray-900.w-40 +1 (555) 987-6543
-                            .text-sm.leading-5.font-normal.text-gray-900.w-40 sample@mail.com
-                    //- .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
-                    //-     .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                    //-         .text-xs.leading-4.font-medium.text-gray-500 Payer
-                    //-         .text-sm.leading-5.font-normal.text-gray-900.w-40 Your Company
-                    .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
-                        .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                            .text-xs.leading-4.font-medium.text-gray-500 Date
-                            .text-sm.leading-5.font-normal.text-gray-900.w-40 February 24, 2021
-                    .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
-                        .line.w-full.border-dashed.border-b.pb-3.border-gray-300
-                            .text-xs.leading-4.font-medium.text-gray-500 Transaction ID
-                            .text-base.leading-6.font-normal.text-primary-black.w-full(class="md:w-48 md:leading-5 md:text-sm") 233DFERDRGRG54EV45GT
-                    .inline-flex.items-center.rounded-md.w-full.pb-8.px-6
-                        .line.w-full
-                            .text-blue-500.text-base.leading-6.font-semibold
-                                | [ClientName]
+  .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
+    //- Navigation btn
+    mixin list(classItem, classPoint)
+      li.item(class= classItem class= classPoint)
+        block
 
-                
-            .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4 z-10")
-                .w-full.js-next-step(class="mt-9")
-                    button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
-                        | Done
-                    button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
-                        span.inline-flex
-                            svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
-                                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4')
-                        span.inline-flex Download Receipt
-                    button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
-                        span.inline-flex
-                            svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
-                                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z')
-                        span.inline-flex Share Receipt
+    include ../#parts/navigation-step.pug
 
-            .block(class="md:mt-24 md:hidden")
-                include ../#includes/footer.pug
+    section.flex.flex-col.justify-between.content.bg-white.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14 content-gr-mobile")
+      .step-block
+        .info.flex.justify-center.flex-wrap.text-center
+          span.infline-flex.w-full.mb-2
+            img.m-auto(src="../../img/check.svg" alt="" srcset="" width="45px" height="45px")
+          +info__title()
+            | Successfully Submitted!
+        .balance.mt-6.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative.z-10
+          .text.uppercase.text-blue-200.text-xs.leading-5.font-medium.pt-6.ww-full Payment Amount
+          .cash.font-normal.text-5xl.text-white.py-3.w-full $1,734<span class="opacity-50">.58</span>
+          .company.bg-blue-800.rounded-14p.py-1.pl-4.pr-1.mb-7.mt-3.cursor-default.leading-5(class="flex items-center")
+            span.text-blue-400.text-xs.font-medium.uppercase Estimated Processing Time:
+            span.inline-flex.items-center.rounded-full.text-xs.font-normal.text-white(class='px-2 py-0.5')
+              |   Instant
+        .summary__info--v2.m-auto(class="-mt-3 md:w-80 w-11/12 bg-summary-info md:min-w-350p" style="background-size: 100% 100%; background-position: center; background-repeat: no-repeat;")
+          .inline-flex.items-center.rounded-md.w-full.pt-9.pb-3.px-6
+            .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+              .mb-3(class="mt-0.5")
+                svg(xmlns='http://www.w3.org/2000/svg' width='49' height='32' viewBox='0 0 49 32' fill='none')
+                  rect(width='49' height='32' rx='6' fill='#111827')
+                  path(d='M19.9961 8.13232H28.7889V23.8676H19.9961V8.13232Z' fill='#F16022')
+                  path(d='M20.5186 16C20.5186 12.8382 22.0089 9.97059 24.3934 8.13235C22.6795 6.80882 20.5186 6 18.1341 6C12.5454 6 8 10.4853 8 16C8 21.5147 12.5454 26 18.1341 26C20.5186 26 22.6795 25.1912 24.3934 23.8676C22.0089 22.0294 20.5186 19.1618 20.5186 16Z' fill='#E91D25')
+                  path(d='M40.7879 16C40.7879 21.5147 36.2425 26 30.6538 26C28.2693 26 26.1084 25.1912 24.3945 23.8676C26.779 22.0294 28.2693 19.2353 28.2693 16C28.2693 12.8382 26.779 9.97059 24.3945 8.13235C26.1084 6.80882 28.2693 6 30.6538 6C36.2425 6 40.7879 10.4853 40.7879 16Z' fill='#F69E1E')
+                  path(d='M38.2051 24.1583V23.9985H38.9583V24.1583H38.6775V24.9156H38.4859V24.1583H38.2051Z' fill='#F69E1E')
+                  path(d='M39.0823 23.9985H39.3215L39.574 24.6147H39.5848L39.8373 23.9985H40.0765V24.9156H39.8884V24.3187H39.8808L39.6434 24.9111H39.5154L39.278 24.3164H39.2704V24.9156H39.0823V23.9985Z' fill='#F69E1E')
+              .text-sm.leading-5.font-normal.text-gray-900 Mastercard ending in 4242
+              .text-xs.leading-4.font-medium.text-gray-500(class="mt-0.5") Expires 12/24
+              .text-xs.leading-4.font-medium.text-gray-500(class="mt-0.5") Johnny Anderson
+          .inline-flex.items-center.flex-wrap.rounded-md.w-full.pb-3.px-6
+            .inline-flex.items-center.rounded-md.w-full.pb-3
+              .line.w-full.pb-1.border-gray-300
+                .text-xs.leading-4.font-medium.text-gray-500 Billing Address
+                .text-sm.leading-5.font-normal.text-gray-900 47 Anyviller RD NW #2 <br> Anytown AZ 01234
+            .inline-flex.items-center.rounded-md.w-full.pb-3
+              .line.w-full.pb-1.border-gray-300
+                .text-xs.leading-4.font-medium.text-gray-500 Date of Birth
+                .text-sm.leading-5.font-normal.text-gray-900 MM - DD - YYYY
+            .inline-flex.items-center.rounded-md.w-full
+              .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+                .text-xs.leading-4.font-medium.text-gray-500 SSN (Social Security Number)
+                .text-sm.leading-5.font-normal.text-gray-900 ending in SSSS
+          .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
+            .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+              .text-xs.leading-4.font-medium.text-gray-500 Contact Info
+              .text-sm.leading-5.font-normal.text-gray-900.w-40 +1 (555) 987-6543
+              .text-sm.leading-5.font-normal.text-gray-900.w-40 sample@mail.com
+          //- .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
+          //-     .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+          //-         .text-xs.leading-4.font-medium.text-gray-500 Payer
+          //-         .text-sm.leading-5.font-normal.text-gray-900.w-40 Your Company
+          .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
+            .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+              .text-xs.leading-4.font-medium.text-gray-500 Date
+              .text-sm.leading-5.font-normal.text-gray-900.w-40 February 24, 2021
+          .inline-flex.items-center.rounded-md.w-full.pb-3.px-6
+            .line.w-full.border-dashed.border-b.pb-3.border-gray-300
+              .text-xs.leading-4.font-medium.text-gray-500 Transaction ID
+              .text-base.leading-6.font-normal.text-primary-black.w-full(class="md:w-48 md:leading-5 md:text-sm") 233DFERDRGRG54EV45GT
+          .inline-flex.items-center.rounded-md.w-full.pb-8.px-6
+            .line.w-full
+              .text-blue-500.text-base.leading-6.font-semibold
+                | [ClientName]
+
+
+      .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4 z-10")
+        .w-full.js-next-step(class="mt-9")
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
+            | Done
+          button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
+            span.inline-flex
+              svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4')
+            span.inline-flex Download Receipt
+          button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
+            span.inline-flex
+              svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z')
+            span.inline-flex Share Receipt
+
+      include ../#includes/footer.pug
 include ../#includes/scripts.pug

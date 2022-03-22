@@ -8,7 +8,7 @@ body.home.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 			mixin list(classItem, classPoint)
 				li.item(class= classItem class= classPoint)
 					block
-					
+
 			.heading(class="md:hidden")
 				.heading-nav.py-5.px-4
 					.heading-nav__arrow
@@ -65,12 +65,7 @@ body.home.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 									span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
 										.span(class="h-2 w-2 bg-gray-300 rounded-full")
 									span(class="text-sm font-medium text-white ml-4") Complete Payment
-					.copyright.flex.items-center.justify-center.w-full
-						img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
-						span.font-medium.text-xs.mx-1.text-white.opacity-40
-							| Powered by
-						a(href="https://www.transcard.com/" target="_blank")
-							img(src="../../img/logo__transcard__white.svg", alt="Transcard", srcset="")
+					+Footer()
 		.content.bg-white.pt-9.px-4(class="md:w-8/12 md:p-14 md:pt-9 min-h-screen flex md:justify-center justify-between h-full flex-col")
 			.step-section
 				include ../#includes/header.pug
@@ -88,7 +83,7 @@ body.home.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 						//- .border-opacity-5.border-8.border-white
 						.notification.rounded-10p.bg-white.bg-opacity-15.p-4.flex.mt-9.relative.max-h-64.backdrop-blur-xl.backdrop-filter
 							.icon.min-w-max.hidden
-								img(src="../../img/notification.svg", alt="Notification", srcset="")
+								img(src="../../img/notification.svg" alt="Notification" srcset="")
 							.text.px-4.font-medium.text-sm.leading-5.pl-0.overflow-y-scroll.overflow-x-hidden
 								|  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tincidunt turpis, et rhoncus est. Suspendisse non rutrum lectus, eget aliquet leo. Ut arcu mauris, finibus eu posuere id, elementum non nibh. Quisque feugiat eget eros id tempor. Suspendisse lacus arcu, rutrum at suscipit ac, iaculis quis nulla. Nullam sit amet justo at neque tempor tincidunt. Suspendisse scelerisque varius dapibus. Maecenas in purus justo. Maecenas eget mi et nunc auctor bibendum a tincidunt est. Suspendisse non turpis laoreet, molestie nibh quis, porttitor nisl. Donec hendrerit augue at libero tempor tincidunt in nec quam. Aliquam erat volutpat. Duis condimentum aliquet arcu, non faucibus mauris volutpat sit amet. Vivamus nisi dui, elementum sed sapien efficitur, lobortis sagittis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris aliquet lacinia eros, et tincidunt elit viverra ac. Vestibulum maximus arcu vel felis lacinia efficitur. Donec id sem sed enim consectetur sodales sed.
 					.flex.items-center.mt-8.relative(class="md:mt-28 w-full")
@@ -104,12 +99,6 @@ body.home.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 								path(d='M13.1667 1.66666L16.5 4.99999M16.5 4.99999L13.1667 8.33332M16.5 4.99999L1.5 4.99999' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
 
 			//- Footer
-			footer(class="footer py-10 w-full bg-white relative md:hidden")
-				.copyright.flex.items-center.justify-center
-					img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
-					span.font-medium.text-xs.mx-1
-						| Powered by
-					a(href="https://www.transcard.com/" target="_blank")
-						img(src="../../img/logo__transcard.svg", alt="Transcard", srcset="")
+			+Footer('dark')
 
 include ../#includes/scripts.pug

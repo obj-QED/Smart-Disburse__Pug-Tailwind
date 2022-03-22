@@ -1,119 +1,81 @@
 //- Info
 //- Title
 mixin info__title()
-    .info__title
-            h1.text-3xl.font-normal.text-gray-800
-                block
+  .info__title
+    h1.text-3xl.font-normal.text-gray-800
+      block
 //- Body
 mixin info__content()
-    .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
-            block
+  .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
+    block
 
 doctype html
 include ../#includes/meta.pug
 
 body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
-    .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
-        //- Navigation btn
-        mixin list(classItem, classPoint)
-            li.item(class= classItem class= classPoint)
-                block
-        // Hidden mobile  
-        .heading(class="hidden")
-            include ../#parts/navigation-step--mobile.pug
-        .menu.bg-menu.justify-center.flex-wrap.min-h-screen.hidden(class="md:w-4/12 md:flex")
-            .sticky.flex.justify-between.flex-col.h-full.max-h-screen.top-0.min-w-220p(class="md:pt-10 md:pb-14  lg:pt-14 lg:pb-18")
-                .block
-                    include ../#parts/menu__accordion.pug
-                    ul.menu-nav
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Confirm Identity
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Review Documents
-                        +list('mb-6')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Provide Signature
-                        +list('mb-6')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Receive Payment
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Complete Payment
-                .copyright.flex.items-end.justify-center.w-full
-                    img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
-                    span.font-medium.text-xs.mx-1.text-white.opacity-40
-                        | Powered by
-                    a(href="https://www.transcard.com/" target="_blank")
-                        img(src="../../img/logo__transcard__white.svg", alt="Transcard", srcset="")
-        // Deteled class .rounded-tl-20p.rounded-tr-20p
-        section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14 content-gr-mobile")
-            .step-block
-                .info.flex.justify-center.flex-wrap.mb-6(class="md:mb-14")
-                    span.infline-flex.w-full.mb-2
-                        img.m-auto(src="../../img/check.svg", alt="", srcset="", width="45px" height="45px")
-                    +info__title()
-                        | Card Created!
-                .card-write.font-roboto.mx-auto(style="min-width: 380px; max-width:380px")
-                    .bg-card-write.rounded-xl.p-5.shadow-card-write.w-full.text-white
-                        .inline-flex.justify-end.w-full
-                            span.inline-flex.items-center.bg-white.bg-opacity-20.rounded-lg(class="text-xs leading-4 font-medium px-1.5")
-                                span.mr-1 CVC2:
-                                span 855
-                        .inline-flex.align-bottom.justify-between.items-end.w-full(class="mt-3.5")
-                            span.block.font-semibold(style="font-size: 27px; line-height: 46px;")
-                                | $1,734.58
-                            span.block.font-semibold(style="font-size: 12px; line-height: 15,83px")
-                                | debit
-                        .inline-flex.w-full(class="mb-2.5")
-                            span.block.font-normal(style="font-size: 22px; line-height: 24,79px")
-                                | 5115-9502-8176-1020
-                        .inline-flex.w-full.flex.justify-center.items-center
-                            .inline-flex.flex-col.font-semibold.mr-2(style="font-size: 10px; line-height: 10,8px")
-                                span
-                                    | VALID
-                                span
-                                    | THRU
-                            .inline-flex
-                                span(style="font-size: 14px; line-height: 16,8px")
-                                    | 04/23
-                        .inline-flex.w-full.items-end.justify-between
-                            .inline-flex.font-semibold(style="font-size: 14px; line-height: 18.46px")
-                                | JOHNNY ANDERSON
-                            .inline-flex
-                                svg(xmlns='http://www.w3.org/2000/svg' width='52' height='32' viewBox='0 0 52 32' fill='none')
-                                    path(d='M19.0273 3.38184H32.9728V28.3381H19.0273V3.38184Z' fill='#F16022')
-                                    path(d='M19.8545 15.8601C19.8545 10.8455 22.2182 6.29738 26 3.38192C23.2818 1.2828 19.8545 0 16.0727 0C7.20909 0 0 7.1137 0 15.8601C0 24.6064 7.20909 31.7201 16.0727 31.7201C19.8545 31.7201 23.2818 30.4373 26 28.3382C22.2182 25.4227 19.8545 20.8746 19.8545 15.8601Z' fill='#E91D25')
-                                    path(d='M52.0005 15.8601C52.0005 24.6064 44.7914 31.7201 35.9278 31.7201C32.1459 31.7201 28.7187 30.4373 26.0005 28.3382C29.7823 25.4227 32.1459 20.9913 32.1459 15.8601C32.1459 10.8455 29.7823 6.29738 26.0005 3.38192C28.7187 1.2828 32.1459 0 35.9278 0C44.7914 0 52.0005 7.1137 52.0005 15.8601Z' fill='#F69E1E')
-                        
-                .notice.pb-4.pt-0.mt-10.text-center(class="md:mt-6 md:px-4 md:pt-4")
-                    .bg-gray-50.rounded-md.py-5.px-6(class="hover:bg-gray-100")
-                        .balance.text-sm.leading-5.font-normal.mb-4.text-gray-400
-                            | Here's your brand new Virtual Card, loaded with your <b class="font-semibold text-black">$1,734.58</b>.
-                        a.text-sm.leading-5.font-medium.text-primary-blue(href="" class="hover:opacity-90")
-                            |  How to use this card
+  .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
+    //- Navigation btn
+    mixin list(classItem, classPoint)
+      li.item(class= classItem class= classPoint)
+        block
 
-            .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4 z-10")
-                .w-full.js-next-step(class="md:mt-8")
-                    button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
-                        | Add to Wallet
-                    button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
-                        span.inline-flex
-                            svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
-                                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4')
-                        span.inline-flex Save Card Details
+    include ../#parts/navigation-step.pug
 
-            .block(class="md:mt-24 md:hidden")
-                include ../#includes/footer.pug
+    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14 content-gr-mobile")
+      .step-block
+        .info.flex.justify-center.flex-wrap.mb-6(class="md:mb-14")
+          span.infline-flex.w-full.mb-2
+            img.m-auto(src="../../img/check.svg" alt="" srcset="" width="45px" height="45px")
+          +info__title()
+            | Card Created!
+        .card-write.font-roboto.mx-auto(style="min-width: 380px; max-width:380px")
+          .bg-card-write.rounded-xl.p-5.shadow-card-write.w-full.text-white
+            .inline-flex.justify-end.w-full
+              span.inline-flex.items-center.bg-white.bg-opacity-20.rounded-lg(class="text-xs leading-4 font-medium px-1.5")
+                span.mr-1 CVC2:
+                span 855
+            .inline-flex.align-bottom.justify-between.items-end.w-full(class="mt-3.5")
+              span.block.font-semibold(style="font-size: 27px; line-height: 46px;")
+                | $1,734.58
+              span.block.font-semibold(style="font-size: 12px; line-height: 15,83px")
+                | debit
+            .inline-flex.w-full(class="mb-2.5")
+              span.block.font-normal(style="font-size: 22px; line-height: 24,79px")
+                | 5115-9502-8176-1020
+            .inline-flex.w-full.flex.justify-center.items-center
+              .inline-flex.flex-col.font-semibold.mr-2(style="font-size: 10px; line-height: 10,8px")
+                span
+                  | VALID
+                span
+                  | THRU
+              .inline-flex
+                span(style="font-size: 14px; line-height: 16,8px")
+                  | 04/23
+            .inline-flex.w-full.items-end.justify-between
+              .inline-flex.font-semibold(style="font-size: 14px; line-height: 18.46px")
+                | JOHNNY ANDERSON
+              .inline-flex
+                svg(xmlns='http://www.w3.org/2000/svg' width='52' height='32' viewBox='0 0 52 32' fill='none')
+                  path(d='M19.0273 3.38184H32.9728V28.3381H19.0273V3.38184Z' fill='#F16022')
+                  path(d='M19.8545 15.8601C19.8545 10.8455 22.2182 6.29738 26 3.38192C23.2818 1.2828 19.8545 0 16.0727 0C7.20909 0 0 7.1137 0 15.8601C0 24.6064 7.20909 31.7201 16.0727 31.7201C19.8545 31.7201 23.2818 30.4373 26 28.3382C22.2182 25.4227 19.8545 20.8746 19.8545 15.8601Z' fill='#E91D25')
+                  path(d='M52.0005 15.8601C52.0005 24.6064 44.7914 31.7201 35.9278 31.7201C32.1459 31.7201 28.7187 30.4373 26.0005 28.3382C29.7823 25.4227 32.1459 20.9913 32.1459 15.8601C32.1459 10.8455 29.7823 6.29738 26.0005 3.38192C28.7187 1.2828 32.1459 0 35.9278 0C44.7914 0 52.0005 7.1137 52.0005 15.8601Z' fill='#F69E1E')
+
+        .notice.pb-4.pt-0.mt-10.text-center(class="md:mt-6 md:px-4 md:pt-4")
+          .bg-gray-50.rounded-md.py-5.px-6(class="hover:bg-gray-100")
+            .balance.text-sm.leading-5.font-normal.mb-4.text-gray-400
+              | Here's your brand new Virtual Card, loaded with your <b class="font-semibold text-black">$1,734.58</b>.
+            a.text-sm.leading-5.font-medium.text-primary-blue(href="" class="hover:opacity-90")
+              |  How to use this card
+
+      .w-full.pb-4(class="md:pb-0 md:mt-0 mt-4 z-10")
+        .w-full.js-next-step(class="md:mt-8")
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
+            | Add to Wallet
+          button.border.border-gray-300.mt-6.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' style='max-height:56px' type='button')
+            span.inline-flex
+              svg.text-primary-light-blue(class="h-5 w-5 mr-2.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4')
+            span.inline-flex Save Card Details
+
+      include ../#includes/footer.pug
 include ../#includes/scripts.pug

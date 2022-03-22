@@ -538,7 +538,7 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
-[type='text'],[type='number'],[type='date'],[type='month'],[type='time'],textarea,select {
+[type='text'],[type='url'],[type='number'],[type='date'],[type='month'],[type='time'],textarea,select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -554,7 +554,7 @@ video {
   line-height: 1.5rem;
 }
 
-[type='text']:focus, [type='number']:focus, [type='date']:focus, [type='month']:focus, [type='time']:focus, textarea:focus, select:focus {
+[type='text']:focus, [type='url']:focus, [type='number']:focus, [type='date']:focus, [type='month']:focus, [type='time']:focus, textarea:focus, select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
@@ -751,6 +751,7 @@ select {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -782,7 +783,15 @@ select {
   top: 1.5rem;
 }
 
+.-top-11 {
+  top: -2.75rem;
+}
+
 .top-1\/2 {
+  top: 50%;
+}
+
+.top-2\/4 {
   top: 50%;
 }
 
@@ -790,12 +799,24 @@ select {
   right: 0px;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
 .right-4 {
   right: 1rem;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
 .right-12 {
   right: 3rem;
+}
+
+.right-3\.5 {
+  right: 0.875rem;
 }
 
 .bottom-0 {
@@ -832,6 +853,18 @@ select {
 
 .z-20 {
   z-index: 20;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
 }
 
 .m-auto {
@@ -940,6 +973,10 @@ select {
   margin-top: 4rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-28 {
   margin-top: 7rem;
 }
@@ -956,8 +993,8 @@ select {
   margin-top: 0.875rem;
 }
 
-.-mt-0 {
-  margin-top: 0px;
+.-mt-1 {
+  margin-top: -0.25rem;
 }
 
 .-mt-3 {
@@ -966,10 +1003,6 @@ select {
 
 .-mt-6 {
   margin-top: -1.5rem;
-}
-
-.-mt-0\.5 {
-  margin-top: -0.125rem;
 }
 
 .mr-1 {
@@ -1314,6 +1347,10 @@ select {
 
 .w-\[1px\] {
   width: 1px;
+}
+
+.min-w-11 {
+  min-width: 2.75rem;
 }
 
 .min-w-full {
@@ -1826,6 +1863,10 @@ select {
   background-color: rgba(54, 113, 251);
 }
 
+.bg-neutralGray-900 {
+  background-color: rgba(38, 38, 38, 1);
+}
+
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -1875,6 +1916,10 @@ select {
 
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-75 {
@@ -2446,6 +2491,11 @@ select {
   color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
 
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgba(16, 185, 129, var(--tw-text-opacity));
@@ -2468,6 +2518,10 @@ select {
 
 .text-primary-blue {
   color: rgba(54, 113, 251);
+}
+
+.text-neutralGray-700 {
+  color: rgba(140, 140, 140, 1);
 }
 
 .hover\:text-red-50:hover {
@@ -2538,6 +2592,10 @@ select {
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .hover\:opacity-80:hover {
@@ -2616,6 +2674,11 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-notice-box {
+  --tw-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2665,6 +2728,19 @@ select {
 
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
+}
+
+.filter {
+  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-filter {
@@ -2914,6 +2990,11 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:inset-y-full {
+    top: 100%;
+    bottom: 100%;
+  }
+
   .md\:m-auto {
     margin: auto;
   }
@@ -2941,10 +3022,6 @@ select {
 
   .md\:mt-16 {
     margin-top: 4rem;
-  }
-
-  .md\:mt-24 {
-    margin-top: 6rem;
   }
 
   .md\:mt-28 {

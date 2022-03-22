@@ -1,98 +1,61 @@
 //- Info
 //- Title
 mixin info__title()
-    .info__title
-            h1.text-3xl.font-normal.text-gray-800
-                block
+  .info__title
+    h1.text-3xl.font-normal.text-gray-800
+      block
 //- Body
 mixin info__content()
-    .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
-            block
+  .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
+    block
 
 doctype html
 include ../#includes/meta.pug
 
 // Else height > content, (class="min-h-screen flex flex-col justify-between bg-white")
 body.max-w-screen-lg.m-auto.font-inter.container.relative(class="md:bg-gray-100 min-h-screen flex flex-col justify-between bg-white")
-    .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
-        //- Navigation btn
-        mixin list(classItem, classPoint)
-            li.item(class= classItem class= classPoint)
-                block
-                
-        .heading(class="md:hidden")
-            include ../#parts/navigation-step--mobile.pug
-        .menu.bg-menu.justify-center.flex-wrap.min-h-screen.hidden(class="md:w-4/12 md:flex")
-            .sticky.flex.justify-between.flex-col.h-full.max-h-screen.top-0.min-w-220p(class="md:pt-10 md:pb-14  lg:pt-14 lg:pb-18")
-                .block
-                    include ../#parts/menu__accordion.pug
-                    ul.menu-nav
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Confirm Identity
-                        +list('flex mb-6 items-center')
-                            a.flex.items-center.cursor-default
-                                svg.h-5.w-5.text-white(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
-                                    path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
-                                span(class="text-sm font-medium text-white ml-4") Review Documents
-                        +list('mb-6')
-                            a.flex.items-center.cursor-default
-                                span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center")
-                                    span(class="absolute h-4 w-4 rounded-full bg-white bg-opacity-10")
-                                    span(class="relative block w-2 h-2 bg-white rounded-full")
-                                span(class="text-sm font-medium text-white ml-4") Provide Signature
-                        +list('mb-6 opacity-30')
-                            a.flex.items-center.cursor-default
-                                span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
-                                    .span(class="h-2 w-2 bg-gray-300 rounded-full")
-                                span(class="text-sm font-medium text-white ml-4") Receive Payment
-                        +list('flex mb-6 items-center opacity-30')
-                            .flex.items-center.cursor-default
-                                span(class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center bg-transparent rounded-full")
-                                    .span(class="h-2 w-2 bg-gray-300 rounded-full")
-                                span(class="text-sm font-medium text-white ml-4") Complete Payment
-                .copyright.flex.items-center.justify-center.w-full
-                    img.min-w-max(src="../../img/logo__copyright.svg", alt="logo footer", srcset="")
-                    span.font-medium.text-xs.mx-1.text-white.opacity-40
-                        | Powered by
-                    a(href="https://www.transcard.com/" target="_blank")
-                        img(src="../../img/logo__transcard__white.svg", alt="Transcard", srcset="")
-        section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
-            .step-block
-                .info
-                    +info__title()
-                        span Sign <b class="font-bold">[SignatureHeaderText]</b>
-                .upload-doc.text-sm.font-medium.flex.items-center.mt-6
-                    button.font-medium.draw.rounded-6p.text-white.bg-gray-100.text-gray-900.mr-5.py-2.px-3.cursor-pointer(class="focus:outline-none hover:bg-gray-50") Draw
-                    button.font-medium.type.rounded-6p.text-gray-900.mr-5.py-2.px-3.cursor-pointer(class="focus:outline-none hover:bg-gray-50") Type
-                .preview-doc.bg-gray-50.relative.mt-4.rounded-16p
-                    .field-signature.pt-2.pb-4.bg-white.min-w-full(style="display:none")
-                        label(class="text-sm text-gray-700 font-medium mb-1 block" for="signature") Your full name
-                        input.w-full.block.inputdow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm focus:text-red-900 sm:text-sm' placeholder="Vasile Schidu")
-                    .relative.min-h-doc-prev.mb-10
-                        img.absolute.inset-0(src="../../img/signature.png", alt="document" class="-translate-y-2/4	-translate-x-2/4 top-1/2 left-1/2 transform")
-                        button.clear.absolute.top-4.right-4.bg-white.border.border-gray-300.shadow.py-2.px-4.rounded-6p.cursor-pointer(class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue hover:bg-gray-50") Clear
-            .py-6.js-next-step(class="md:py-0")
-                button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.rounded-md.bg-indigo-600.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
-                    | Sign
+  .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
+    //- Navigation btn
+    mixin list(classItem, classPoint)
+      li.item(class= classItem class= classPoint)
+        block
+
+    include ../#parts/navigation-step.pug
+
+    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
+      .step-block
+        .info
+          +info__title()
+            span Sign <b class="font-bold">[SignatureHeaderText]</b>
+        .upload-doc.text-sm.font-medium.flex.items-center.mt-6
+          button.font-medium.draw.rounded-6p.text-white.bg-gray-100.text-gray-900.mr-5.py-2.px-3.cursor-pointer(class="focus:outline-none hover:bg-gray-50") Draw
+          button.font-medium.type.rounded-6p.text-gray-900.mr-5.py-2.px-3.cursor-pointer(class="focus:outline-none hover:bg-gray-50") Type
+        .preview-doc.bg-gray-50.relative.mt-4.rounded-16p
+          .field-signature.pt-2.pb-4.bg-white.min-w-full(style="display:none")
+            label(class="text-sm text-gray-700 font-medium mb-1 block" for="signature") Your full name
+            input.w-full.block.inputdow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm focus:text-red-900 sm:text-sm' placeholder="Vasile Schidu")
+          .relative.min-h-doc-prev.mb-10
+            img.absolute.inset-0(src="../../img/signature.png" alt="document" class="-translate-y-2/4	-translate-x-2/4 top-1/2 left-1/2 transform")
+            button.clear.absolute.top-4.right-4.bg-white.border.border-gray-300.shadow.py-2.px-4.rounded-6p.cursor-pointer(class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue hover:bg-gray-50") Clear
+      .py-6.js-next-step(class="md:py-0")
+        button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.rounded-md.bg-indigo-600.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
+          | Sign
 
 
 
-    include ../#includes/footer.pug
-    include ../#includes/scripts.pug
+  include ../#includes/footer.pug
+  include ../#includes/scripts.pug
 
-    script.
-        $(document).ready(function(){
-            $('.upload-doc .type').on('click', function(){
-                $(this).addClass('bg-gray-100').parents('.step-block').find('.field-signature').show(300);
-                $(this).parents('.step-block').find('.clear').addClass('hidden');
-                $('.draw').removeClass('bg-blue-50 bg-gray-100').addClass('text-gray-500');
-            });
-            $('.upload-doc .draw').on('click', function(){
-                $(this).addClass('bg-gray-100').parents('.step-block').find('.field-signature').hide(300);
-                $(this).parents('.step-block').find('.clear').removeClass('hidden');
-                $(this).parent().find('.type').removeClass('bg-gray-100')
-            });
-        });
+  script.
+    $(document).ready(function(){
+      $('.upload-doc .type').on('click', function(){
+        $(this).addClass('bg-gray-100').parents('.step-block').find('.field-signature').show(300);
+        $(this).parents('.step-block').find('.clear').addClass('hidden');
+        $('.draw').removeClass('bg-blue-50 bg-gray-100').addClass('text-gray-500');
+      });
+      $('.upload-doc .draw').on('click', function(){
+        $(this).addClass('bg-gray-100').parents('.step-block').find('.field-signature').hide(300);
+        $(this).parents('.step-block').find('.clear').removeClass('hidden');
+        $(this).parent().find('.type').removeClass('bg-gray-100')
+      });
+    });

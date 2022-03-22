@@ -1,81 +1,81 @@
 .fixed(class="inset-0 z-10 overflow-y-auto overflow-x-scroll inset-0")
-    .flex(class="max-w-inherit items-center justify-center min-h-screen sm:block")
-        .bg-white(class="mx-auto max-w-inherit md:w-full h-auto p-4 md:p-14 md:pt-14 pt-9 pb-16" style="max-width:674px")
-            .info.mb-6
-                .title.text-3xl.text-gray-800.mb-4.font-normal Contact <b class="font-semibold">[ClientName]</b>
-                .descrpt.text-sm.font-normal.text-gray-500 Please enter your information
-            form(action="")
-                .flex.justify-start.flex-wrap
-                    label.mb-1.block.text-sm.font-medium.text-gray-700(for='first_name')
-                        | First name
-                    .relative(class='sm:col-span-2 w-full')
-                        input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+  .flex(class="max-w-inherit items-center justify-center min-h-screen sm:block")
+    .bg-white(class="mx-auto max-w-inherit md:w-full h-auto p-4 md:p-14 md:pt-14 pt-9 pb-16" style="max-width:674px")
+      .info.mb-6
+        .title.text-3xl.text-gray-800.mb-4.font-normal Contact <b class="font-semibold">[ClientName]</b>
+        .descrpt.text-sm.font-normal.text-gray-500 Please enter your information
+      form(action="")
+        .flex.justify-start.flex-wrap
+          label.mb-1.block.text-sm.font-medium.text-gray-700(for='first_name')
+            | First name
+          .relative(class='sm:col-span-2 w-full')
+            input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
-                .flex.justify-start.flex-wrap.mt-6
-                    label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
-                        | Last name
-                    .relative(class='sm:col-span-2 w-full')
-                        input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+        .flex.justify-start.flex-wrap.mt-6
+          label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
+            | Last name
+          .relative(class='sm:col-span-2 w-full')
+            input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
-                .flex.justify-start.flex-wrap.mt-6
-                    label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
-                        | Company 
-                        span.font-normal.opacity-20 (optional)
-                    .relative(class='sm:col-span-2 w-full')
-                        input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+        .flex.justify-start.flex-wrap.mt-6
+          label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
+            | Company 
+            span.font-normal.opacity-20 (optional)
+          .relative(class='sm:col-span-2 w-full')
+            input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
-                .flex.justify-start.flex-wrap.mt-6
-                    label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
-                        | Email
-                    .relative(class='sm:col-span-2 w-full')
-                        input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+        .flex.justify-start.flex-wrap.mt-6
+          label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
+            | Email
+          .relative(class='sm:col-span-2 w-full')
+            input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
-                .flex.line-input.relative.w-full.mt-6
-                            .w-full
-                                label.block.text-sm.font-medium.text-gray-700(for='input') Email
-                                .mt-1.relative.rounded-md.shadow-sm
-                                    input#input.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' name='input' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900')
-                                    .absolute.inset-y-0.right-0.pr-3.flex.items-center.pointer-events-none
-                                        // Heroicon name: solid/exclamation-circle
-                                        svg.h-5.w-5.text-red-500(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
-                                            path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
-                                p.error.text-xs.text-red-900.mt-1(class='w-11/12') This field is required. Please fill in your answer.
-                .flex.line-input.relative.w-full.mt-6
-                        .w-full
-                            label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
-                            .mt-1.relative.rounded-md.shadow-sm
-                                .absolute.inset-y-0.left-0.flex.items-center
-                                    label.sr-only(for='country') Country
-                                    select#country.h-full.py-0.pl-3.pr-7.border-transparent.bg-transparent.text-gray-500.rounded-md(name='country' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
-                                        option US
-                                        option CA
-                                        option EU
-                                input#phone_number.block.w-full.pl-16.border-gray-300.rounded-md(type='text' name='phone_number' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm' placeholder='+1 (555) 987-6543')
-                .flex.line-input.relative.w-full.mt-6
-                        .w-full
-                            label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
-                            .mt-1.relative.rounded-md.shadow-sm
-                                .absolute.inset-y-0.left-0.flex.items-center
-                                    label.sr-only(for='country') Country
-                                    select#country.h-full.py-0.pl-3.pr-7.border-transparent.bg-transparent.text-gray-500.rounded-md(name='country' class='focus:ring-red-500 focus:border-red-500 sm:text-sm')
-                                        option US
-                                        option CA
-                                        option EU
-                                input#phone_number.block.w-full.pl-16.border-red-300.rounded-md(type='text' name='phone_number' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900' placeholder='+1 (555) 987-6543')
-                                .absolute.inset-y-0.right-0.pr-3.flex.items-center.pointer-events-none
-                                        // Heroicon name: solid/exclamation-circle
-                                        svg.h-5.w-5.text-red-500(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
-                                            path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
-                            p.error.text-xs.text-red-900.mt-1(class='w-11/12') This field is required. Please fill in your answer.
+        .flex.line-input.relative.w-full.mt-6
+          .w-full
+            label.block.text-sm.font-medium.text-gray-700(for='input') Email
+            .mt-1.relative.rounded-md.shadow-sm
+              input#input.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' name='input' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900')
+              .absolute.inset-y-0.right-0.pr-3.flex.items-center.pointer-events-none
+                // Heroicon name: solid/exclamation-circle
+                svg.h-5.w-5.text-red-500(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+                  path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
+            p.error.text-xs.text-red-900.mt-1(class='w-11/12') This field is required. Please fill in your answer.
+        .flex.line-input.relative.w-full.mt-6
+          .w-full
+            label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
+            .mt-1.relative.rounded-md.shadow-sm
+              .absolute.inset-y-0.left-0.flex.items-center
+                label.sr-only(for='country') Country
+                select#country-mini.h-full.py-0.pl-3.pr-7.border-transparent.bg-transparent.text-gray-500.rounded-md(name='country' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                  option US
+                  option CA
+                  option EU
+              input#phone_number.block.w-full.pl-16.border-gray-300.rounded-md(type='text' name='phone_number' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm' placeholder='+1 (555) 987-6543')
+        .flex.line-input.relative.w-full.mt-6
+          .w-full
+            label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
+            .mt-1.relative.rounded-md.shadow-sm
+              .absolute.inset-y-0.left-0.flex.items-center
+                label.sr-only(for='country') Country
+                select#country-mini.h-full.py-0.pl-3.pr-7.border-transparent.bg-transparent.text-gray-500.rounded-md(name='country' class='focus:ring-red-500 focus:border-red-500 sm:text-sm')
+                  option US
+                  option CA
+                  option EU
+              input#phone_number.block.w-full.pl-16.border-red-300.rounded-md(type='text' name='phone_number' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900' placeholder='+1 (555) 987-6543')
+              .absolute.inset-y-0.right-0.pr-3.flex.items-center.pointer-events-none
+                // Heroicon name: solid/exclamation-circle
+                svg.h-5.w-5.text-red-500(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+                  path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
+            p.error.text-xs.text-red-900.mt-1(class='w-11/12') This field is required. Please fill in your answer.
 
-                .flex.justify-start.flex-wrap.mt-6
-                    label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
-                        | Message 
-                        span.font-normal.opacity-20 (maximum of 255 characters)
-                    .relative(class='sm:col-span-2 w-full')
-                        textarea#message.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.h-28(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
-                .w-full.mt-6
-                    button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
-                        | Let’s talk
-                    button.btn-step-prev.justify-center.inline-flex.items-center.px-6.py-3.border.border-gray-300.w-full.text-base.font-medium.text-gray-700.rounded-md.text-white.mt-6(type='button' class=' hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue')
-                        | Cancel
+        .flex.justify-start.flex-wrap.mt-6
+          label.mb-1.block.text-sm.font-medium.text-gray-700(for='last_name')
+            | Message 
+            span.font-normal.opacity-20 (maximum of 255 characters)
+          .relative(class='sm:col-span-2 w-full')
+            textarea#message.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.h-28(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+        .w-full.mt-6
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue' type='button')
+            | Let’s talk
+          button.btn-step-prev.justify-center.inline-flex.items-center.px-6.py-3.border.border-gray-300.w-full.text-base.font-medium.text-gray-700.rounded-md.text-white.mt-6(type='button' class=' hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue')
+            | Cancel

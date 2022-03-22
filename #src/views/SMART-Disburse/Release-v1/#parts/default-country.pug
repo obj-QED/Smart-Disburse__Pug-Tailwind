@@ -1,0 +1,53 @@
+.modal.modal-summary.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
+  .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
+    .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
+    span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
+    .inline-block.align-bottom.bg-white.rounded-lg.px-4.py-6.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
+      .close.p-3.w-12.h-12.cursor-pointer
+        svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+          path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+      div(class="md:px-16")
+        .mt-3.text-center(class='sm:mt-5')
+          h3#modal-title.text-lg.leading-6.font-medium.text-gray-900
+            | Sending your money to
+          .text.text-sm.leading-5.font-normal.text-gray-500.mt-2 Please select the country where you want to receive your <b>[PaymentTypeText]</b> and a supported currency
+        .flex.items-center.flex-wrap.mt-6.mb-3.border-gray-300.rounded-lg.border.py-6.px-4
+          .flex.justify-start.flex-wrap.w-full
+            .block.text-sm.font-medium.text-gray-700(for='City') Country
+            #City.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue')
+              svg(xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewbox='0 0 20 16' fill='none')
+                rect(y='0.5' width='20' height='15' rx='2' fill='white')
+                mask#mask0_9835_47483(style='mask-type:alpha' maskunits='userSpaceOnUse' x='0' y='0' width='20' height='16')
+                  rect(y='0.5' width='20' height='15' rx='2' fill='white')
+                g(mask='url(#mask0_9835_47483)')
+                  path(fill-rule='evenodd' clip-rule='evenodd' d='M20 0.5H0V1.5H20V0.5ZM20 2.5H0V3.5H20V2.5ZM0 4.5H20V5.5H0V4.5ZM20 6.5H0V7.5H20V6.5ZM0 8.5H20V9.5H0V8.5ZM20 10.5H0V11.5H20V10.5ZM0 12.5H20V13.5H0V12.5ZM20 14.5H0V15.5H20V14.5Z' fill='#D02F44')
+                  rect(y='0.5' width='8.57143' height='7' fill='#46467F')
+                  g(filter='url(#filter0_d_9835_47483)')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M1.90551 2C1.90551 2.27614 1.69231 2.5 1.42932 2.5C1.16632 2.5 0.953125 2.27614 0.953125 2C0.953125 1.72386 1.16632 1.5 1.42932 1.5C1.69231 1.5 1.90551 1.72386 1.90551 2ZM3.81027 2C3.81027 2.27614 3.59707 2.5 3.33408 2.5C3.07108 2.5 2.85789 2.27614 2.85789 2C2.85789 1.72386 3.07108 1.5 3.33408 1.5C3.59707 1.5 3.81027 1.72386 3.81027 2ZM5.23884 2.5C5.50183 2.5 5.71503 2.27614 5.71503 2C5.71503 1.72386 5.50183 1.5 5.23884 1.5C4.97585 1.5 4.76265 1.72386 4.76265 2C4.76265 2.27614 4.97585 2.5 5.23884 2.5ZM7.61979 2C7.61979 2.27614 7.40659 2.5 7.1436 2.5C6.88061 2.5 6.66741 2.27614 6.66741 2C6.66741 1.72386 6.88061 1.5 7.1436 1.5C7.40659 1.5 7.61979 1.72386 7.61979 2ZM2.3817 3.5C2.64469 3.5 2.85789 3.27614 2.85789 3C2.85789 2.72386 2.64469 2.5 2.3817 2.5C2.1187 2.5 1.90551 2.72386 1.90551 3C1.90551 3.27614 2.1187 3.5 2.3817 3.5ZM4.76265 3C4.76265 3.27614 4.54945 3.5 4.28646 3.5C4.02347 3.5 3.81027 3.27614 3.81027 3C3.81027 2.72386 4.02347 2.5 4.28646 2.5C4.54945 2.5 4.76265 2.72386 4.76265 3ZM6.19122 3.5C6.45421 3.5 6.66741 3.27614 6.66741 3C6.66741 2.72386 6.45421 2.5 6.19122 2.5C5.92823 2.5 5.71503 2.72386 5.71503 3C5.71503 3.27614 5.92823 3.5 6.19122 3.5ZM7.61979 4C7.61979 4.27614 7.40659 4.5 7.1436 4.5C6.88061 4.5 6.66741 4.27614 6.66741 4C6.66741 3.72386 6.88061 3.5 7.1436 3.5C7.40659 3.5 7.61979 3.72386 7.61979 4ZM5.23884 4.5C5.50183 4.5 5.71503 4.27614 5.71503 4C5.71503 3.72386 5.50183 3.5 5.23884 3.5C4.97585 3.5 4.76265 3.72386 4.76265 4C4.76265 4.27614 4.97585 4.5 5.23884 4.5ZM3.81027 4C3.81027 4.27614 3.59707 4.5 3.33408 4.5C3.07108 4.5 2.85789 4.27614 2.85789 4C2.85789 3.72386 3.07108 3.5 3.33408 3.5C3.59707 3.5 3.81027 3.72386 3.81027 4ZM1.42932 4.5C1.69231 4.5 1.90551 4.27614 1.90551 4C1.90551 3.72386 1.69231 3.5 1.42932 3.5C1.16632 3.5 0.953125 3.72386 0.953125 4C0.953125 4.27614 1.16632 4.5 1.42932 4.5ZM2.85789 5C2.85789 5.27614 2.64469 5.5 2.3817 5.5C2.1187 5.5 1.90551 5.27614 1.90551 5C1.90551 4.72386 2.1187 4.5 2.3817 4.5C2.64469 4.5 2.85789 4.72386 2.85789 5ZM4.28646 5.5C4.54945 5.5 4.76265 5.27614 4.76265 5C4.76265 4.72386 4.54945 4.5 4.28646 4.5C4.02347 4.5 3.81027 4.72386 3.81027 5C3.81027 5.27614 4.02347 5.5 4.28646 5.5ZM6.66741 5C6.66741 5.27614 6.45421 5.5 6.19122 5.5C5.92823 5.5 5.71503 5.27614 5.71503 5C5.71503 4.72386 5.92823 4.5 6.19122 4.5C6.45421 4.5 6.66741 4.72386 6.66741 5ZM7.1436 6.5C7.40659 6.5 7.61979 6.27614 7.61979 6C7.61979 5.72386 7.40659 5.5 7.1436 5.5C6.88061 5.5 6.66741 5.72386 6.66741 6C6.66741 6.27614 6.88061 6.5 7.1436 6.5ZM5.71503 6C5.71503 6.27614 5.50183 6.5 5.23884 6.5C4.97585 6.5 4.76265 6.27614 4.76265 6C4.76265 5.72386 4.97585 5.5 5.23884 5.5C5.50183 5.5 5.71503 5.72386 5.71503 6ZM3.33408 6.5C3.59707 6.5 3.81027 6.27614 3.81027 6C3.81027 5.72386 3.59707 5.5 3.33408 5.5C3.07108 5.5 2.85789 5.72386 2.85789 6C2.85789 6.27614 3.07108 6.5 3.33408 6.5ZM1.90551 6C1.90551 6.27614 1.69231 6.5 1.42932 6.5C1.16632 6.5 0.953125 6.27614 0.953125 6C0.953125 5.72386 1.16632 5.5 1.42932 5.5C1.69231 5.5 1.90551 5.72386 1.90551 6Z' fill='url(#paint0_linear_9835_47483)')
+                defs
+                  filter#filter0_d_9835_47483(x='0.953125' y='1.5' width='6.66797' height='6' filterunits='userSpaceOnUse' color-interpolation-filters='sRGB')
+                    feflood(flood-opacity='0' result='BackgroundImageFix')
+                      fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+                        feoffset(dy='1')
+                          fecolormatrix(type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0')
+                            feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_9835_47483')
+                              feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_9835_47483' result='shape')
+                  lineargradient#paint0_linear_9835_47483(x1='0.953125' y1='1.5' x2='0.953125' y2='6.5' gradientunits='userSpaceOnUse')
+                    stop(stop-color='white')
+                    stop(offset='1' stop-color='#F0F0F0')
+              span.ml-3.text-base.text-gray-900(class="sm:text-sm") United States
+              svg(xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewbox='0 0 10 6' fill='none' class='absolute right-5')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683416 -0.097631 1.31658 -0.097631 1.7071 0.292893L4.99999 3.58579L8.29288 0.292893C8.6834 -0.0976311 9.31657 -0.0976311 9.70709 0.292893C10.0976 0.683417 10.0976 1.31658 9.70709 1.70711L5.7071 5.70711C5.31657 6.09763 4.68341 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z' fill='#6B7280')
+
+          .flex.justify-start.flex-wrap.mt-4.w-full
+            label.block.text-sm.font-medium.text-gray-400(for='City') Currancy
+            select#City.mt-1.block.w-full.pl-3.pr-10.py-2.text-base.bg-gray-100.border-gray-300.rounded-md.text-gray-500(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+              option(hidden disabled value)
+              option(selected) USD
+              option EUR
+
+        .mt-9
+          button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')
+            | Confirm
+          button.border.border-gray-300.mt-4.justify-center.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue  w-full mt-4 flex' style='max-height:56px' type='button')
+            span.inline-flex Cancel
