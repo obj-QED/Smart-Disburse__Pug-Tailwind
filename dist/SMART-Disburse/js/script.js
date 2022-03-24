@@ -52,4 +52,17 @@ $(document).ready(function () {
     $(this).parents(".menu").find(".js-footer-powered").toggleClass("hidden");
     $(this).parents(".menu").find(".js-foooter-container").toggleClass("flex-col-reverse");
   });
+
+  // Change currancy modal
+  let isOpenModal = $('section').hasClass('is-view-currancy-change');
+
+  if (isOpenModal) {
+    $('.modal-change-currancy').show();
+  } else {
+    $('.modal-change-currancy').hide();
+  }
+
+  $('.money-change .change').on('click', function () {
+    $('.modal-change-currancy').css({ display: 'block' });
+  });
 });

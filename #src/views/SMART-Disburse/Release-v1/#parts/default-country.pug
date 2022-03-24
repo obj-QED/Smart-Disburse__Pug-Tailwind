@@ -1,8 +1,8 @@
-.modal.modal-summary.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
+.modal.modal-summary.modal-change-currancy.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
   .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
     .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
     span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
-    .inline-block.align-bottom.bg-white.rounded-lg.px-4.py-6.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
+    .inline-block.align-bottom.bg-white.rounded-lg.p-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
       .close.p-3.w-12.h-12.cursor-pointer
         svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
           path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
@@ -13,8 +13,9 @@
           .text.text-sm.leading-5.font-normal.text-gray-500.mt-2 Please select the country where you want to receive your <b>[PaymentTypeText]</b> and a supported currency
         .flex.items-center.flex-wrap.mt-6.mb-3.border-gray-300.rounded-lg.border.py-6.px-4
           .flex.justify-start.flex-wrap.w-full
-            .block.text-sm.font-medium.text-gray-700(for='City') Country
-            #City.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue')
+            label.block.text-sm.font-medium.text-gray-700(for='City') Country
+            button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+
               svg(xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewbox='0 0 20 16' fill='none')
                 rect(y='0.5' width='20' height='15' rx='2' fill='white')
                 mask#mask0_9835_47483(style='mask-type:alpha' maskunits='userSpaceOnUse' x='0' y='0' width='20' height='16')
@@ -36,18 +37,16 @@
                     stop(stop-color='white')
                     stop(offset='1' stop-color='#F0F0F0')
               span.ml-3.text-base.text-gray-900(class="sm:text-sm") United States
-              svg(xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewbox='0 0 10 6' fill='none' class='absolute right-5')
-                path(fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683416 -0.097631 1.31658 -0.097631 1.7071 0.292893L4.99999 3.58579L8.29288 0.292893C8.6834 -0.0976311 9.31657 -0.0976311 9.70709 0.292893C10.0976 0.683417 10.0976 1.31658 9.70709 1.70711L5.7071 5.70711C5.31657 6.09763 4.68341 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976309 1.31658 -0.0976309 0.683417 0.292893 0.292893Z' fill='#6B7280')
 
           .flex.justify-start.flex-wrap.mt-4.w-full
             label.block.text-sm.font-medium.text-gray-400(for='City') Currancy
-            select#City.mt-1.block.w-full.pl-3.pr-10.py-2.text-base.bg-gray-100.border-gray-300.rounded-md.text-gray-500(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+            select#City.mt-1.block.w-full.pl-3.pr-10.py-2.text-base.bg-gray-100.border-gray-300.rounded-md.text-gray-400(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
               option(hidden disabled value)
               option(selected) USD
               option EUR
 
         .mt-9
-          button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-md.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')
+          button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-lg.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')
             | Confirm
-          button.border.border-gray-300.mt-4.justify-center.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-md.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue  w-full mt-4 flex' style='max-height:56px' type='button')
+          button.border.border-gray-300.mt-4.justify-center.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-lg.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue  w-full mt-4 flex' style='max-height:56px' type='button')
             span.inline-flex Cancel

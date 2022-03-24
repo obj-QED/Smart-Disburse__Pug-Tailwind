@@ -21,7 +21,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 
     include ../#parts/navigation-step.pug
 
-    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
+    section.is-view-currancy-change.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-4 px-4 pb-4 md:p-10 lg:p-14")
       .step-block
         .step-block__nav.hidden.items-start.justify-between.mb-11(class="md:flex")
           a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue(aria-current='step' x-description='Current Step' class="w-1/2")
@@ -68,31 +68,31 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='holder-name')
                 | Account Holder Name 
               .relative(class='sm:col-span-2 w-full')
-                input#holder-name.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='holder-name' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500')
+                input#holder-name.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='holder-name' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='routing_number')
                 | Routing Number 
               .relative(class='sm:col-span-2 w-full flex items-center')
-                input#routing_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='routing_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500')
+                input#routing_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='routing_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
                 .ml-2(class="md:hidden block")
                   img(src="../../img/card-action.svg" alt="" srcset="")
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='account_number')
                 | Account Number 
               .relative(class='sm:col-span-2 w-full')
-                input#account_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='account_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-500')
+                input#account_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='account_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
 
 
 
       .w-full.pt-6.pb-6(class="md:pb-0 md:mt-0 mt-4")
-        button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 md:hidden' style='min-height:50px' type='button')
+        button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 md:hidden' style='min-height:50px' type='button')
           | Next
           svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
         .justify-between.items-center(class="md:mt-16 hidden md:flex")
-          button.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-md(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 mr-6' type='button')
+          button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 mr-6' type='button')
             | Back
-          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3' style='min-height:50px' type='button')
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4' style='min-height:50px' type='button')
             | Next
             svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
               path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
@@ -100,6 +100,6 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
           a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
             | Route using my <b class="font-semibold"> debit card number</b>
 
+.-mt-9
   include ../#includes/footer.pug
-include ../#parts/default-country.pug
 include ../#includes/scripts.pug

@@ -127,12 +127,12 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                       path(fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd')
                     .text-green-800.text-xs-s Accepted
       .pt-6.js-next-step
-        button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.rounded-md.bg-indigo-600.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue mb-4' type='button')
+        button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue py-4 mr-6 flex md:mt-4' type='button')
           | Accept
-        button.mr-auto.bg-white.border.border-gray-300.justify-center.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-md(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue py-3 mr-6 flex md:mt-4' type='button')
+        button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue py-4 mr-6 flex md:mt-4' type='button')
           | Dispute
 
-  include ../#includes/footer.pug
+include ../#includes/footer.pug
   include ../#includes/scripts.pug
   script.
     $('.item__heading').click(function(){

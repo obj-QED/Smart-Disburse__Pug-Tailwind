@@ -29,7 +29,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 
       include ../#parts/navigation-step.pug
 
-    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
+    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-4 px-4 pb-4 md:p-10 lg:p-14")
       .step-block
         .step-block__nav.hidden.items-start.justify-between.mb-11(class="md:flex")
           a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Current Step' class="w-1/2")
@@ -49,7 +49,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
         .block(class="md:hidden")
-          include ../#parts/change-money--italy
+          include ../#parts/change-money
 
         .info
           +info__title()
@@ -73,7 +73,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
 
             .flex.justify-start.flex-wrap.mt-4
               label.block.text-sm.font-medium.text-gray-400(for='City') Country
-              select#City.mt-1.block.w-full.pl-3.pr-10.py-2.opacity-70.bg-gray-100.border-gray-300.rounded-md.text-gray-400(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+              select#City.shadow-sm.mt-1.block.w-full.pl-3.pr-10.py-2.opacity-70.bg-gray-100.border-gray-300.rounded-md.text-gray-400(name='City' class='focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
                 option(hidden disabled value)
                 option(selected) Italy
                 option Canada
@@ -99,12 +99,12 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                 | Date of Birth
               .relative(class='sm:col-span-2 w-full')
-                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' placeholder="MM - DD - YYYY" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder="MM - DD - YYYY" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                 | SSN (Social Security Number)
               .relative(class='sm:col-span-2 w-full')
-                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' placeholder="AAA - GG - SSSS" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder="AAA - GG - SSSS" autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
           .border.border-gray-200.rounded-10p.p-4.mt-4
             .block
               label.block.text-sm.font-medium.text-gray-700(for='phone_number') Phone Number
@@ -115,7 +115,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                     option US
                     option CA
                     option EU
-                input#phone_number.block.w-full.pl-16.border-gray-300.rounded-md(type='text' name='phone_number' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm' placeholder='+1 (555) 987-6543')
+                input#phone_number.block.w-full.pl-16.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='phone_number' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm' placeholder='+1 (555) 987-6543')
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                 | Email
@@ -123,19 +123,24 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
       .w-full.pt-6.pb-6(class="md:pb-0 md:mt-0 mt-4")
-        button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 md:hidden' style='min-height:50px' type='button')
+        button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 md:hidden' style='min-height:50px' type='button')
           | Next
           svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
         .justify-between.items-center(class="md:mt-16 hidden md:flex")
-          button.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-md(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 mr-6' type='button')
+          button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 mr-6' type='button')
             | Back
-          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3' style='min-height:50px' type='button')
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4' style='min-height:50px' type='button')
             | Next
             svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
               path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
         .mt-8.text-center(class="md:mb-3.5")
           a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
             | Route using my <b class="font-semibold">debit card number</b>
+.-mt-9
   include ../#includes/footer.pug
 include ../#includes/scripts.pug
+
+script.
+  $('.money-change .flag svg').replaceWith('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none"> <rect x="0.25" y="0.75" width="19.5" height="14.5" rx="1.75" fill="white" stroke="#F5F5F5" stroke-width="0.5"></rect> <mask id="mask0_10635_67678" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="16"> <rect x="0.25" y="0.75" width="19.5" height="14.5" rx="1.75" fill="white" stroke="white" stroke-width="0.5"></rect> </mask> <g mask="url(#mask0_10635_67678)"> <rect x="13.334" y="0.5" width="6.66667" height="15" fill="#E43D4C"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5H6.66667V0.5H0V15.5Z" fill="#1BB65D"></path> </g> </svg>')
+  $('.money-change .valute .name').text('Italy')

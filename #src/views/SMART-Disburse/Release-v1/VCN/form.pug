@@ -123,21 +123,21 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
         .w-full.pt-6.pb-6(class="md:pb-0")
-          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 md:hidden' style='min-height:50px' type='button')
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 md:hidden' style='min-height:50px' type='button')
             | Next
             svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
               path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
 
           .justify-between.items-center(class="md:mt-16 hidden md:flex")
-            button.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-md(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3 mr-6' type='button')
+            button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 mr-6' type='button')
               | Back
-            button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-md(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-3' style='min-height:50px' type='button')
+            button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4' style='min-height:50px' type='button')
               | Next
               svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
           .mt-8.text-center(class="md:mb-3.5")
             a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
               | I'd rather send it directly to my <b class="font-semibold"> bank account </b>
-        include ../#includes/footer.pug
+  include ../#includes/footer.pug
   include ../#parts/modal-VC.pug
 include ../#includes/scripts.pug
