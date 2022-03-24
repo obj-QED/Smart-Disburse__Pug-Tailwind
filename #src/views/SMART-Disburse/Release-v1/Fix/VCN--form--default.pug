@@ -35,8 +35,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               span.relative.block.w-2.h-2.bg-gray-200.rounded-full
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
-        .block(class="md:hidden")
-          include ../#parts/change-money
+        include ../#parts/change-money
 
         .info
           +info__title()
@@ -79,7 +78,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
             .flex.justify-start.flex-wrap.mt-4
-              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_2') 
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_2')
                 span.mr-1 Address Line 2
                 span.font-normal.opacity-20 (optional)
               .relative(class='sm:col-span-2 w-full')
@@ -103,7 +102,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 option Canada
                 option EU
             .flex.justify-start.flex-wrap.mt-4
-              label.mb-1.block.text-sm.font-medium.text-gray-700(for='postal') 
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='postal')
                 span.mr-1 ZIP Code
               .relative(class='sm:col-span-2 w-full')
                 input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
@@ -140,7 +139,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
           .mt-9.text-center(class="md:mb-3.5")
-            a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
+            a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80")
               | I'd rather send it directly to my <b class="font-semibold"> bank account </b>
 
 .-mt-9

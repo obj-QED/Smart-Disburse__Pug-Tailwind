@@ -40,8 +40,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               span.relative.block.w-2.h-2.bg-gray-200.rounded-full
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
-        .block(class="md:hidden")
-          include ../#parts/change-money
+        include ../#parts/change-money
 
         .info
           +info__title()
@@ -66,19 +65,19 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                   span.block.text-base.font-medium.text-gray-700 Savings
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='holder-name')
-                | Account Holder Name 
+                | Account Holder Name
               .relative(class='sm:col-span-2 w-full')
                 input#holder-name.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='holder-name' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='routing_number')
-                | Routing Number 
+                | Routing Number
               .relative(class='sm:col-span-2 w-full flex items-center')
                 input#routing_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='routing_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
                 .ml-2(class="md:hidden block")
                   img(src="../../img/card-action.svg" alt="" srcset="")
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='account_number')
-                | Account Number 
+                | Account Number
               .relative(class='sm:col-span-2 w-full')
                 input#account_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='account_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
 
@@ -97,7 +96,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
             svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
               path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
         .mt-8.text-center(class="md:mb-3.5")
-          a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80") 
+          a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80")
             | Route using my <b class="font-semibold"> debit card number</b>
 
 .-mt-9
