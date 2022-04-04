@@ -1,3 +1,5 @@
+include ../components/StickyXb
+
 //- Info
 //- Title
 mixin info__title()
@@ -99,6 +101,9 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
           a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80")
             | Route using my <b class="font-semibold"> debit card number</b>
 
+
 .-mt-9
   include ../#includes/footer.pug
+
++StickyXb()(class="md:hidden")
 include ../#includes/scripts.pug

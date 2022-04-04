@@ -57,7 +57,7 @@ function browserSync(params) {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
-    .pipe(webphtml()) // *: working with html
+    // .pipe(webphtml()) // *: working with html
     .pipe(
       pug({
         doctype: "html",
