@@ -1,0 +1,136 @@
+//- Info
+//- Title
+mixin info__title()
+  .info__title
+    h1.text-3xl.font-normal.text-gray-800
+      block
+//- Body
+mixin info__content()
+  .info__content.text-sm.text-gray-500.font-normal.mt-4.mb-4
+    block
+
+doctype html
+include ../#includes/meta.pug
+
+body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
+  .step(class="md:flex md:bg-none bg-dark-blue relative  md:max-h-full")
+    //- Navigation btn
+    mixin list(classItem, classPoint)
+      li.item(class= classItem class= classPoint)
+        block
+
+    include ../#parts/navigation-step.pug
+
+    section.flex.flex-col.justify-between.content.bg-white.rounded-tl-20p.rounded-tr-20p.min-h-80vh(class="md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14")
+      .step-block
+        .step-block__nav.hidden.items-start.justify-between.mb-11(class="md:flex")
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Current Step' class="w-1/2")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              svg.h-4.w-4.text-primary-blue(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
+                path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Bank Details
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Current Step' class="w-1/2 md:items-start lg:items-center")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              svg.h-4.w-4.text-primary-blue(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')
+                path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Account Information
+          a.cursor-default.flex.items-center.pt-4.border-t-2.border-primary-blue( aria-current='step' x-description='Next Step' class="w-1/2")
+            span.flex-shrink-0.h-5.w-5.relative.flex.items-center.justify-center(aria-hidden='true')
+              span.absolute.h-4.w-4.rounded-full.bg-primary-blue.opacity-20
+              span.relative.block.w-2.h-2.bg-primary-blue.rounded-full
+            span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
+        .info
+          +info__title()
+            span One <b class="font-semibold">Final Step</b>
+          +info__content()
+            span Make sure all the details are accurate
+        .balance.mt-6.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative
+          .text.uppercase.text-blue-200.text-xs.leading-5.font-medium.pt-6.ww-full
+            | Payment Amount
+          .cash.font-normal.text-5xl.text-white.py-3.w-full
+            | A$2,312<span class="opacity-50">.76</span>
+          .company.bg-blue-800.rounded-14p.mb-3.mt-3.cursor-default.leading-5(class="flex items-center xsm:justify-start justify-center xsm:flex-nowrap flex-wrap xxsm:p-0 xsm:py-1 xsm:pl-4 xsm:pr-1")
+            span.text-blue-400.text-xs.font-medium.pr-1.mr-1.uppercase(class="xsm:w-max w-full mt-3 xsm:mt-0") Estimated Processing Time:
+            span.inline-flex.items-center.rounded-full.text-xs.font-normal.bg-yellow-500.text-white(class='pr-2 pl-2 py-0.5 my-2 xsm:my-0')
+              svg.text-white.mr-1(class='w-3.5 h-3.5 group-hover:text-indigo-800' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+                path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
+              |   Up to 3 Days
+          .info-amount.rounded-md.p-2.w-full.bg-blue-800.bg-opacity-50.mx-4.mb-4.w-310px(class="text-sm leading-5 font-medium")
+            .inline-flex.justify-between.w-full(class="mb-2.5")
+              span.text-blue-400 Originating amount:
+              span.text-blue-200 $1,734.58
+            .inline-flex.justify-between.w-full
+              span.text-blue-400 Conversion rate:
+              span.text-blue-200 1 USD = 1.33 AUD
+
+        .summary__info.pt-9
+          .inline-flex.items-center.rounded-md.bg-gray-50.mb-3.w-full.py-5.px-6(class="hover:bg-gray-100")
+            .w-full
+              .line.w-full
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | Bank Account Holder Full Name
+                .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                  | Johnny Anderson
+              .line.w-full.mt-4
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | Branch ID
+                .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                  | 000-000
+              .line.w-full.mt-4
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | Account Number
+                .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                  | 012345678
+            a.text-xs.leading-4.font-medium.text-primary-light-blue(href="" class="hover:text-opacity-90")
+              | Edit
+          .inline-flex.items-center.rounded-md.bg-gray-50.mb-3.w-full.py-5.px-6(class="hover:bg-gray-100")
+            .w-full
+              .line.w-full.mr-4
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | Billing Address
+                .text-sm.leading-5.font-normal.text-gray-900.w-40
+                  | Bennelong Point, Sydney NSW 2000, Australia
+              .line.w-full.mt-4
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | Date of Birth
+                .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                  | MM - DD - YYYY
+              .line.w-full.mt-4
+                .text-xs.leading-4.font-medium.text-gray-500
+                  | ID Number
+                .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                  | ending in SSSS
+            a.text-xs.leading-4.font-medium.text-primary-light-blue(href="" class="hover:text-opacity-90")
+              | Edit
+          .inline-flex.items-center.rounded-md.bg-gray-50.mb-3.w-full.py-5.px-6(class="hover:bg-gray-100")
+            .line.w-full.mr-4
+              .text-xs.leading-4.font-medium.text-gray-500 Contact Info
+              .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5")
+                | +61 2 9250 7111
+              .text-base.leading-6.font-normal.text-primary-black(class="md:text-sm md:leading-5") sample@mail.com
+            a.text-xs.leading-4.font-medium.text-primary-light-blue(href="" class="hover:text-opacity-90")
+              | Edit
+      .w-full.pb-8(class="md:pb-0 md:mt-6 mt-4")
+        .w-full.mt-8.js-next-step.flex.justify-between.items-center(class="md:flex-row flex-col-reverse")
+          button.border.border-gray-300.mt-6.justify-center.items-center.px-6.py-4.w-full.shadow-sm.text-base.font-medium.rounded-10p.text-gray-700(class='hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 w-full md:mt-0 mt-6 hidden md:inline-flex' style='max-height:56px' type='button')
+            span.inline-flex Back
+          button.btn-step-next.justify-center.inline-flex.items-center.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 w-full' type='button')
+            | Deposit $1,734.58
+
+.-mt-9
+  include ../#includes/footer.pug
+  include ../#parts/modal-BA.pug
+include ../#includes/scripts.pug
+
+script.
+  $('#push_inst').on('click', function(){
+    $(this).parent().addClass('bg-blue-50 border-2 border-blue-600').removeClass('bg-gray-50')
+    $('#push_route').parent().removeClass('bg-blue-50 border-2 border-blue-600').addClass('bg-gray-50')
+    $('.btn-confirm').addClass('shadow-form bg-btn-form text-white').removeClass('bg-gray-200 text-gray-400')
+  })
+
+  $('#push_route').on('click', function(){
+    $(this).parent().addClass('bg-blue-50 border-2 border-blue-600').removeClass('bg-gray-50')
+    $('#push_inst').parent().removeClass('bg-blue-50 bg-gray-50 border-2 border-blue-600').addClass('bg-gray-50')
+    $('.btn-confirm').addClass('shadow-form bg-btn-form text-white').removeClass('bg-gray-200 text-gray-400')
+  })
