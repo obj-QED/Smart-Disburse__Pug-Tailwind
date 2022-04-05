@@ -26,7 +26,7 @@ mixin ChangeMoney(country)
     }
   .money-change.flex.items-center.justify-between.border.border-gray-300.rounded-md.py-2.px-3.mb-6.shadow-sm
     .inline-flex
-      .valute.inline-flex.items-center.ml-2
+      .valute.inline-flex.items-center
         +Flag(mapCountries[country].img, mapCountries[country].title)(class="mr-3")
         .name.span.text.text-gray-700.text-sm.leading-5.font-medium
           | #{mapCountries[country].title}
