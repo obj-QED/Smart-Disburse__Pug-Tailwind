@@ -62,7 +62,28 @@ $(document).ready(function () {
     $('.modal-change-currancy').hide();
   }
 
-  $('.money-change .change').on('click', function () {
+  $('.open-change-currancy').on('click', function () {
     $('.modal-change-currancy').css({ display: 'block' });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', (e) => {
+    if(e.target.closest('.js-stickyxb-button')) {
+      let stickyxbDropdown = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-dropdown')
+      let stickyxbButton = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-button')
+      let stickyxbArrow = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-arrow')
+      let stickyxbOverlay = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-overlay')
+
+      console.log(stickyxbDropdown)
+      stickyxbDropdown.classList.toggle('opacity-0')
+      stickyxbDropdown.classList.toggle('pointer-events-none')
+      stickyxbDropdown.classList.toggle('translate-y-2')
+
+      stickyxbArrow.classList.toggle('rotate-180')
+
+      stickyxbOverlay.classList.toggle('opacity-0')
+      stickyxbOverlay.classList.toggle('pointer-events-none')
+    }
+  })
+})

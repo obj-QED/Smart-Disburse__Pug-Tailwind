@@ -72,7 +72,7 @@ mixin Footer(mode, desktop)
 				]
 			)
 		// terms
-		if mode === 'dark' 
+		//- if mode === 'dark'
 			+FooterLanguage(mode)(class="")
 
 			hr(
@@ -82,7 +82,7 @@ mixin Footer(mode, desktop)
 				]
 			)
 
-		else
+		//- else
 			div(class="w-full flex justify-center mb-2 js-switch-language")
 				+FooterLanguage(mode)
 

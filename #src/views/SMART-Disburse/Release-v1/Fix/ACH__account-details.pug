@@ -1,4 +1,5 @@
 include ../components/StickyXb
+include ../components/ChangeMoney
 
 //- Info
 //- Title
@@ -42,7 +43,8 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               span.relative.block.w-2.h-2.bg-gray-200.rounded-full
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
-        include ../#parts/change-money
+        +ChangeMoney('US')
+        include ../#parts/default-country.pug
 
         .info
           +info__title()
@@ -84,13 +86,15 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 input#account_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='account_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
 
 
+      .w-full.pt-8.pb-6(class="md:pb-0 md:mt-0 mt-4")
 
-      .w-full.pt-6.pb-6(class="md:pb-0 md:mt-0 mt-4")
+        +StickyXb('US')(class="hidden md:flex")
+
         button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 md:hidden' style='min-height:50px' type='button')
           | Next
           svg.h-5.w-5.text-white(class="ml-3.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 8l4 4m0 0l-4 4m4-4H3')
-        .justify-between.items-center(class="md:mt-16 hidden md:flex")
+        .justify-between.items-center(class="md:mt-9 hidden md:flex")
           button.h-14.mr-auto.bg-white.border.border-gray-300.justify-center.inline-flex.items-center.px-6.w-full.shadow-sm.text-base.font-medium.text-gray-700.rounded-10p(class='hover:opacity-90 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4 mr-6' type='button')
             | Back
           button.btn-step-next.justify-center.inline-flex.items-center.px-6.w-full.shadow-form.text-base.font-medium.text-white.rounded-10p(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue md:w-44 lg:w-64 py-4' style='min-height:50px' type='button')
@@ -101,9 +105,8 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
           a.text-sm.leading-5.font-normal.text-primary-blue.text-center(href="" class="hover:opacity-80")
             | Route using my <b class="font-semibold"> debit card number</b>
 
-
 .-mt-9
   include ../#includes/footer.pug
 
-+StickyXb()(class="md:hidden")
++StickyXb('US')(class="md:hidden")
 include ../#includes/scripts.pug

@@ -1,0 +1,4 @@
+mixin Flag(imageName, alt)
+  div(class="relative flex items-center rounded-sm overflow-hidden")&attributes(attributes)
+    div(class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10")
+    img(src=`../../img/flags/${imageName}.svg` alt=alt class="w-5")
