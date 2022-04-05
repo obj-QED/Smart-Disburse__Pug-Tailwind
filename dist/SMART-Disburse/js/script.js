@@ -54,36 +54,40 @@ $(document).ready(function () {
   });
 
   // Change currancy modal
-  let isOpenModal = $('section').hasClass('is-view-currancy-change');
+  let isOpenModal = $("section").hasClass("is-view-currancy-change");
 
   if (isOpenModal) {
-    $('.modal-change-currancy').show();
+    $(".modal-change-currancy").show();
   } else {
-    $('.modal-change-currancy').hide();
+    $(".modal-change-currancy").hide();
   }
 
-  $('.open-change-currancy').on('click', function () {
-    $('.modal-change-currancy').css({ display: 'block' });
+  $(".open-change-currancy").on("click", function () {
+    $(".modal-change-currancy").css({ display: "block" });
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', (e) => {
-    if(e.target.closest('.js-stickyxb-button')) {
-      let stickyxbDropdown = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-dropdown')
-      let stickyxbButton = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-button')
-      let stickyxbArrow = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-arrow')
-      let stickyxbOverlay = e.target.closest('.js-stickyxb').querySelector('.js-stickyxb-overlay')
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".js-stickyxb-button")) {
+      let stickyxbDropdown = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-dropdown");
+      let stickyxbButton = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-button");
+      let stickyxbArrow = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-arrow");
+      let stickyxbOverlay = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-overlay");
 
-      console.log(stickyxbDropdown)
-      stickyxbDropdown.classList.toggle('opacity-0')
-      stickyxbDropdown.classList.toggle('pointer-events-none')
-      stickyxbDropdown.classList.toggle('translate-y-2')
+      console.log(stickyxbDropdown);
+      stickyxbDropdown.classList.toggle("opacity-0");
+      stickyxbDropdown.classList.toggle("pointer-events-none");
+      stickyxbDropdown.classList.toggle("translate-y-2");
 
-      stickyxbArrow.classList.toggle('rotate-180')
+      stickyxbArrow.classList.toggle("rotate-180");
 
-      stickyxbOverlay.classList.toggle('opacity-0')
-      stickyxbOverlay.classList.toggle('pointer-events-none')
+      stickyxbOverlay.classList.toggle("opacity-0");
+      stickyxbOverlay.classList.toggle("pointer-events-none");
     }
-  })
-})
+  });
+});
+
+$(".open-change-currancy").on("click", function () {
+  $(".money-change").show();
+});

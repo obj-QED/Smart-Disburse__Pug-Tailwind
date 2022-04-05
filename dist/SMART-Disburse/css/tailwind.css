@@ -3283,10 +3283,6 @@ select {
     border-width: 1px;
   }
 
-  .md\:border-t {
-    border-top-width: 1px;
-  }
-
   .md\:bg-transparent {
     background-color: transparent;
   }
