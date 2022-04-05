@@ -831,6 +831,7 @@ module.exports = {
             80: "20rem",
             "500px": "500px",
             "[1px]": "1px",
+            "310px": "310px"
         }),
         zIndex: {
             auto: "auto",
