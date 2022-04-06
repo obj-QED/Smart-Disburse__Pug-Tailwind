@@ -1,4 +1,4 @@
-# Smart Disburse
+# Smart-Disbursements Product
 
 ## :bulb: The source of truth is the design in Figma:
 * [Versioning board](https://www.figma.com/file/3xOqsx6FVPNEAiSSpPCLJN/Versions?node-id=72%3A0)
