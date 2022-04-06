@@ -6,6 +6,8 @@ mixin StickyXb(country)
       US: {
         img: 'US - United States',
         title: 'United States',
+        paymentAmount: '$1,734.58',
+
       },
       AU: {
         img: 'AU - Australia',
@@ -92,7 +94,7 @@ mixin StickyXb(country)
     button(
       class=[
         'relative z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300',
-        'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500'
+        'md:focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500'
       ]
     ).js-stickyxb-button
       +Flag(mapCountries[country].img, country)(class="mr-3")

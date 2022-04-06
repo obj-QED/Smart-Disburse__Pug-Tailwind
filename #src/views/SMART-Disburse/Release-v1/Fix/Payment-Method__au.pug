@@ -49,12 +49,8 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative(class="md:bg-bgray-100
       .info.text-center
         +info__title()
           | Get your <b class="font-bold">money:</b>
-        .instant.cursor-pointer.bg-gray-50.py-5.px-4.mt-6.mb-4.rounded-10p(class="hover:bg-gray-100")
-          span.bg-clip-text.text-transparent.bg-instant.font-bold.text-lg Instant to Spend
-        .send.cursor-pointer.bg-gray-50.py-5.px-4.mb-6.rounded-10p(class="hover:bg-gray-100")
+        .send.mt-6.cursor-pointer.bg-gray-50.py-5.px-4.mb-6.rounded-10p(class="hover:bg-gray-100")
           span.bg-clip-text.text-transparent.bg-send.font-bold.text-lg Send to my Bank
-        .check.cursor-pointer.pt-2(class="pb-3.5")
-          span.text-gray-400.font-medium.text-xs(class="hover:text-gray-500")  No, I want a check
 
   +ChooseCountry('AU')
   include ../#parts/modal-message.pug
