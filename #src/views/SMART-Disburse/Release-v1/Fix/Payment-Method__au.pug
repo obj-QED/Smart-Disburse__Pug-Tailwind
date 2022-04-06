@@ -45,7 +45,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative(class="md:bg-bgray-100
           svg.h-4.w-4.text-blue-500(class="mr-1.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
           span(class="xsm:w-auto xsm:overflow-visible xsm:whitespace-normal xxsm:w-28p xxsm:whitespace-nowrap xxsm:overflow-hidden") Full Details
-      +ChangeMoney('US')
+      +ChangeMoney('AU')
       .info.text-center
         +info__title()
           | Get your <b class="font-bold">money:</b>
@@ -56,7 +56,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative(class="md:bg-bgray-100
         .check.cursor-pointer.pt-2(class="pb-3.5")
           span.text-gray-400.font-medium.text-xs(class="hover:text-gray-500")  No, I want a check
 
-  +ChooseCountry('US')
+  +ChooseCountry('AU')
   include ../#parts/modal-message.pug
   include ../#parts/modal-expiration.pug
   include ../#parts/modal-full-details.pug
