@@ -808,8 +808,16 @@ select {
   right: 1rem;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
 .right-12 {
   right: 3rem;
+}
+
+.right-0\.5 {
+  right: 0.125rem;
 }
 
 .bottom-0 {
@@ -2596,6 +2604,11 @@ select {
 .focus\:text-red-900:focus {
   --tw-text-opacity: 1;
   color: rgba(127, 29, 29, var(--tw-text-opacity));
+}
+
+.focus\:text-gray-900:focus {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
 .hover\:text-opacity-90:hover {

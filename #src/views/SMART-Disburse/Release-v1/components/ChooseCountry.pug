@@ -79,13 +79,41 @@ mixin ChooseCountry(country)
               label.block.text-sm.font-medium.text-gray-400(for='City') Currancy
               +select()
 
-            if country = 'AU'
+            if country == 'AU'
               .flex.justify-start.flex-wrap.mt-4.w-full
                 label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                   | Branch ID
                 .relative(class='sm:col-span-2 w-full')
                   input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder=mapCountries[country].branchId.placeholder  autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
+            if country == 'AU'
+              .flex.line-input.relative.w-full.flex-wrap.mt-4
+                label.mb-1.block.text-sm.font-medium.text-gray-700 [FieldName]
+                .relative.w-full
+                  input#first_name.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' placeholder="000-000" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-gray-900 sm:text-sm')
+                  .absolute.inset-y-0.pr-3.flex.items-center.pointer-events-none(class="right-0.5")
+                    svg.h-5.w-5.text-red-500(x-description='Heroicon name: solid/exclamation-circle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+                      path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
+                .w-full.text-xs.leading-4.font-normal.mt-1.text-red-900
+                  | [FieldName] is required.
+
+            if country == 'IT'
+              .flex.justify-start.flex-wrap.w-full.mt-4
+              label.block.text-sm.font-medium.text-gray-700(for='City') Bank
+              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                span.text-base.text-gray-900(class="sm:text-sm")= mapCountries[country].Bank.fieldBankItaly.name
+
+            if country == 'IT'
+              .flex.justify-start.flex-wrap.line-input.relative.w-full.mt-4
+                label.block.text-sm.font-medium.text-gray-700(for='City') Bank
+                .relative.w-full.mt-1
+                  button#country-dropdown.flex.items-center.block.w-full.pl-3.pr-10.py-2.border.border-red-300.rounded-md.relative.shadow-sm(type='text' style="height: 2.4rem; outline: none" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900 sm:text-sm')
+                    span.text-base.text-gray-900(class="sm:text-sm")
+                  .absolute.right-5.inset-y-0.pr-3.flex.items-center.pointer-events-none
+                    svg.h-5.w-5.text-red-500(x-description='Heroicon name: solid/exclamation-circle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
+                      path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
+                .w-full.text-xs.leading-4.font-normal.mt-1.text-red-900
+                  | Bank selection is required.
 
           .mt-9
             button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-lg.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')
