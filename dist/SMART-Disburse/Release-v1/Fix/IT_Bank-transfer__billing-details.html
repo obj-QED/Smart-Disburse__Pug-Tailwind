@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-    <section class="flex flex-col justify-between content bg-white rounded-tl-20p rounded-tr-20p min-h-80vh md:rounded-none md:w-8/12 md:min-h-full pt-4 px-4 pb-4 md:p-10 lg:p-14">
+    <section class="flex flex-col justify-between content bg-white rounded-tl-20p rounded-tr-20p min-h-80vh md:rounded-none md:w-8/12 md:min-h-full pt-9 px-4 pb-4 md:p-10 lg:p-14">
       <div class="step-block">
         <div class="step-block__nav hidden items-start justify-between mb-11 md:flex"><a class="cursor-default flex items-center pt-4 border-t-2 border-primary-blue w-1/2" aria-current="step" x-description="Current Step"><span class="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true">
               <svg class="h-4 w-4 text-primary-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -218,9 +218,9 @@
       <div class="w-full pt-8 pb-6 md:pb-0 md:mt-0 mt-4">
         <div class="sticky bottom-0 md:relative w-full js-stickyxb hidden md:flex">
           <!-- Overlay-->
-          <div class="md:hidden fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all js-stickyxb-overlay"></div>
+          <button class="md:hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all focus:outline-none js-stickyxb-overlay js-stickyxb-button"></button>
           <!-- Dropdown-->
-          <div class="absolute z-1 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
+          <div class="absolute z-3 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
             <div class="w-full">
               <!-- row-->
               <div class="flex items-center py-4 px-6 w-full">
@@ -260,7 +260,7 @@
             </div>
           </div>
           <!-- Button-->
-          <button class="relative z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 md:focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
+          <button class="relative z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
             <div class="relative flex items-center rounded-sm overflow-hidden mr-3">
               <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/IT - Italy.svg" alt="IT">
             </div>
@@ -322,9 +322,9 @@
 </div>
 <div class="sticky bottom-0 md:relative w-full js-stickyxb md:hidden">
   <!-- Overlay-->
-  <div class="md:hidden fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all js-stickyxb-overlay"></div>
+  <button class="md:hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all focus:outline-none js-stickyxb-overlay js-stickyxb-button"></button>
   <!-- Dropdown-->
-  <div class="absolute z-1 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
+  <div class="absolute z-3 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
     <div class="w-full">
       <!-- row-->
       <div class="flex items-center py-4 px-6 w-full">
@@ -364,7 +364,7 @@
     </div>
   </div>
   <!-- Button-->
-  <button class="relative z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 md:focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
+  <button class="relative z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
     <div class="relative flex items-center rounded-sm overflow-hidden mr-3">
       <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/IT - Italy.svg" alt="IT">
     </div>
@@ -380,13 +380,13 @@
 <div class="modal modal-summary modal-change-currancy fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   <div class="flex items-center justify-center min-h-screen py-4 px-4 text-center sm:block sm:p-0">
     <div class="fixed inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity" aria-hidden="true"></div><span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">​</span>
-    <div class="inline-block align-bottom bg-white rounded-lg p-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6">
+    <div class="inline-block align-bottom bg-white rounded-lg p-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6 md:px-4">
       <div class="close p-3 w-12 h-12 cursor-pointer">
         <svg class="text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </div>
-      <div class="md:px-16">
+      <div class="md:px-9 md:pb-9">
         <div class="mt-3 text-center sm:mt-5">
           <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Sending your money to</h3>
           <div class="text text-sm leading-5 font-normal text-gray-500 mt-2">Please select the country where you want to receive your <b>[PaymentTypeText]</b> and a supported currency</div>
@@ -402,7 +402,7 @@
           </div>
           <div class="flex justify-start flex-wrap mt-4 w-full">
             <label class="block text-sm font-medium text-gray-400" for="City">Currancy</label>
-            <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm)" id="Currancy" name="Currancy">
+            <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm" id="Currancy" name="Currancy">
               <option>EUR</option>
             </select>
           </div>

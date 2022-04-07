@@ -70,12 +70,13 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
     if (e.target.closest(".js-stickyxb-button")) {
+      document.body.classList.toggle('overflow-hidden')
+
       let stickyxbDropdown = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-dropdown");
       let stickyxbButton = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-button");
       let stickyxbArrow = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-arrow");
       let stickyxbOverlay = e.target.closest(".js-stickyxb").querySelector(".js-stickyxb-overlay");
 
-      console.log(stickyxbDropdown);
       stickyxbDropdown.classList.toggle("opacity-0");
       stickyxbDropdown.classList.toggle("pointer-events-none");
       stickyxbDropdown.classList.toggle("translate-y-2");

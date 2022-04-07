@@ -41,7 +41,7 @@ mixin ChooseCountry(country)
     }
   mixin select(fieldCurrancy)
     select(
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm)"
+      class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm"
       id="Currancy"
       name="Currancy"
     )
@@ -58,11 +58,11 @@ mixin ChooseCountry(country)
     .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
       .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
       span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
-      .inline-block.align-bottom.bg-white.rounded-lg.p-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6')
+      .inline-block.align-bottom.bg-white.rounded-lg.p-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6 md:px-4')
         .close.p-3.w-12.h-12.cursor-pointer
           svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
-        div(class="md:px-16")
+        div(class="md:px-9 md:pb-9")
           .mt-3.text-center(class='sm:mt-5')
             h3#modal-title.text-lg.leading-6.font-medium.text-gray-900
               | Sending your money to
