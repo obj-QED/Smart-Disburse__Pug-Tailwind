@@ -38,7 +38,7 @@ mixin StickyXb(country)
     // Dropdown
     div(
       class=[
-        'absolute z-3 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all'
+        'absolute z-5 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all'
       ]
     ).js-stickyxb-dropdown
       div(class="w-full")
@@ -52,7 +52,7 @@ mixin StickyXb(country)
               'text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm',
               'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500'
             ]
-          ).open-change-currancy
+          ).open-change-currency
             | Change
 
         if country !== 'US'
@@ -66,7 +66,7 @@ mixin StickyXb(country)
                 'text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm',
                 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500'
               ]
-            ).open-change-currancy
+            ).open-change-currency
               | Change
 
       if country !== 'US'
@@ -93,7 +93,7 @@ mixin StickyXb(country)
     // Button
     button(
       class=[
-        'z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300',
+        'relative md:static z-4 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300',
         'focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500'
       ]
     ).js-stickyxb-button

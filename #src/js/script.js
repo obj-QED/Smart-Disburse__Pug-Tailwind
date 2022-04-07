@@ -53,17 +53,17 @@ $(document).ready(function () {
     $(this).parents(".menu").find(".js-foooter-container").toggleClass("flex-col-reverse");
   });
 
-  // Change currancy modal
-  let isOpenModal = $("section").hasClass("is-view-currancy-change");
+  // Change currency modal
+  let isOpenModal = $("section").hasClass("is-view-currency-change");
 
   if (isOpenModal) {
-    $(".modal-change-currancy").show();
+    $(".modal-change-currency").show();
   } else {
-    $(".modal-change-currancy").hide();
+    $(".modal-change-currency").hide();
   }
 
-  $(".open-change-currancy").on("click", function () {
-    $(".modal-change-currancy").css({ display: "block" });
+  $(".open-change-currency").on("click", function () {
+    $(".modal-change-currency").css({ display: "block" });
   });
 });
 
@@ -89,6 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-$(".open-change-currancy").on("click", function () {
+$(".open-change-currency").on("click", function () {
   $(".money-change").show();
 });

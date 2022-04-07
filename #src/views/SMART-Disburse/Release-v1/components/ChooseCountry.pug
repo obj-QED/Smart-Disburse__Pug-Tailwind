@@ -8,7 +8,7 @@ mixin ChooseCountry(country)
           img: 'US - United States',
           name: 'United States',
         },
-        fieldCurrancy: {
+        fieldCurrency: {
           name: 'USD',
         },
       },
@@ -17,7 +17,7 @@ mixin ChooseCountry(country)
           img: 'AU - Australia',
           name: 'Australia',
         },
-        fieldCurrancy: {
+        fieldCurrency: {
           name: 'AUD',
         },
         branchId : {
@@ -29,7 +29,7 @@ mixin ChooseCountry(country)
           img: 'IT - Italy',
           name: 'Italy',
         },
-        fieldCurrancy: {
+        fieldCurrency: {
           name: 'EUR',
         },
         Bank: {
@@ -39,26 +39,26 @@ mixin ChooseCountry(country)
         },
       }
     }
-  mixin select(fieldCurrancy)
+  mixin select(fieldCurrency)
     select(
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm"
-      id="Currancy"
-      name="Currancy"
+      class="mt-1 block w-full pl-3 pr-10 py-2 text-base shadow-sm bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue"
+      id="Currency"
+      name="Currency"
     )
-      each fieldCurrancy in mapCountries[country].fieldCurrancy
-        option(value=fieldCurrancy.name)
-          | #{fieldCurrancy}
+      each fieldCurrency in mapCountries[country].fieldCurrency
+        option(value=fieldCurrency.name)
+          | #{fieldCurrency}
 
 
   mixin IconLibrary()
     svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")&attributes(attributes)
       path(fill-rule="evenodd" clip-rule="evenodd" d="M10.4963 2.13176C10.1889 1.95608 9.81146 1.95608 9.50403 2.13176L2.50403 6.13176C2.02451 6.40577 1.85792 7.01662 2.13193 7.49614C2.31631 7.81881 2.65322 7.99979 3 8.00017V15C2.44772 15 2 15.4477 2 16C2 16.5523 2.44772 17 3 17H17C17.5523 17 18 16.5523 18 16C18 15.4477 17.5523 15 17 15V8.00017C17.3469 7.99991 17.684 7.81892 17.8684 7.49614C18.1424 7.01662 17.9758 6.40577 17.4963 6.13176L10.4963 2.13176ZM6 9C5.44772 9 5 9.44772 5 10V13C5 13.5523 5.44772 14 6 14C6.55228 14 7 13.5523 7 13V10C7 9.44772 6.55228 9 6 9ZM9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10V13C11 13.5523 10.5523 14 10 14C9.44772 14 9 13.5523 9 13V10ZM14 9C13.4477 9 13 9.44772 13 10V13C13 13.5523 13.4477 14 14 14C14.5523 14 15 13.5523 15 13V10C15 9.44772 14.5523 9 14 9Z" fill="#2563EB")
 
-  .modal.modal-summary.modal-change-currancy.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
+  .modal.modal-summary.modal-change-currency.fixed.z-10.inset-0.overflow-y-auto(aria-labelledby='modal-title' role='dialog' aria-modal='true')
     .flex.items-center.justify-center.min-h-screen.py-4.px-4.text-center(class='sm:block sm:p-0')
       .fixed.inset-0.backdrop-filter.backdrop-blur.bg-black.bg-opacity-75.transition-opacity(aria-hidden='true')
       span.hidden(class='sm:inline-block sm:align-middle sm:h-screen' aria-hidden='true') ​
-      .inline-block.align-bottom.bg-white.rounded-lg.p-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6 md:px-4')
+      .inline-block.align-bottom.bg-white.rounded-lg.p-4.text-left.overflow-hidden.shadow-xl.transform.transition-all(class='md:min-w-lg sm:align-middle sm:max-w-sm sm:w-full w-full')
         .close.p-3.w-12.h-12.cursor-pointer
           svg.text-gray-800(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
             path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
@@ -70,13 +70,13 @@ mixin ChooseCountry(country)
           .flex.items-center.flex-wrap.mt-6.mb-3.border-gray-300.rounded-lg.border.py-6.px-4
             .flex.justify-start.flex-wrap.w-full
               label.block.text-sm.font-medium.text-gray-700(for='City') Country
-              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
 
                 +Flag(mapCountries[country].fieldCountry.img, country)
-                span.ml-3.text-base.text-gray-900(class="sm:text-sm")= mapCountries[country].fieldCountry.name
+                span.ml-3.text-base.text-gray-900= mapCountries[country].fieldCountry.name
 
             .flex.justify-start.flex-wrap.mt-4.w-full
-              label.block.text-sm.font-medium.text-gray-400(for='City') Currancy
+              label.block.text-sm.font-medium.text-gray-400(for='City') Currency
               +select()
 
             if country == 'AU'
@@ -84,13 +84,13 @@ mixin ChooseCountry(country)
                 label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                   | Branch ID
                 .relative(class='sm:col-span-2 w-full')
-                  input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder=mapCountries[country].branchId.placeholder  autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
+                  input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder=mapCountries[country].branchId.placeholder  autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
 
             if country == 'AU'
               .flex.line-input.relative.w-full.flex-wrap.mt-4
                 label.mb-1.block.text-sm.font-medium.text-gray-700 [FieldName]
                 .relative.w-full
-                  input#first_name.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' placeholder="000-000" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-gray-900 sm:text-sm')
+                  input#first_name.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' placeholder="000-000" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 focus:text-gray-900')
                   .absolute.inset-y-0.pr-3.flex.items-center.pointer-events-none(class="right-0.5")
                     svg.h-5.w-5.text-red-500(x-description='Heroicon name: solid/exclamation-circle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
                       path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
@@ -100,15 +100,15 @@ mixin ChooseCountry(country)
             if country == 'IT'
               .flex.justify-start.flex-wrap.w-full.mt-4
               label.block.text-sm.font-medium.text-gray-700(for='City') Bank
-              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
-                span.text-base.text-gray-900(class="sm:text-sm")= mapCountries[country].Bank.fieldBankItaly.name
+              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
+                span.text-base.text-gray-900= mapCountries[country].Bank.fieldBankItaly.name
 
             if country == 'IT'
               .flex.justify-start.flex-wrap.line-input.relative.w-full.mt-4
                 label.block.text-sm.font-medium.text-gray-700(for='City') Bank
                 .relative.w-full.mt-1
-                  button#country-dropdown.flex.items-center.block.w-full.pl-3.pr-10.py-2.border.border-red-300.rounded-md.relative.shadow-sm(type='text' style="height: 2.4rem; outline: none" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 sm:text-sm focus:text-red-900 sm:text-sm')
-                    span.text-base.text-gray-900(class="sm:text-sm")
+                  button#country-dropdown.flex.items-center.block.w-full.pl-3.pr-10.py-2.border.border-red-300.rounded-md.relative.shadow-sm(type='text' style="height: 2.4rem; outline: none" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 focus:text-red-900')
+                    span.text-base.text-gray-900
                   .absolute.right-5.inset-y-0.pr-3.flex.items-center.pointer-events-none
                     svg.h-5.w-5.text-red-500(x-description='Heroicon name: solid/exclamation-circle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
                       path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')

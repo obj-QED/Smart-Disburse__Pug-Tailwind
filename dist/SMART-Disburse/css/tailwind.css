@@ -3099,6 +3099,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:relative {
     position: relative;
   }

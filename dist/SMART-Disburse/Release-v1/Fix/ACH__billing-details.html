@@ -136,9 +136,9 @@
               <div class="name span text text-gray-700 text-sm leading-5 font-medium">United States</div>
             </div>
           </div>
-          <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currancy">Change destination</button>
+          <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currency">Change destination</button>
         </div>
-        <div class="modal modal-summary modal-change-currancy fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="modal modal-summary modal-change-currency fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
           <div class="flex items-center justify-center min-h-screen py-4 px-4 text-center sm:block sm:p-0">
             <div class="fixed inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity" aria-hidden="true"></div><span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">​</span>
             <div class="inline-block align-bottom bg-white rounded-lg p-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6">
@@ -191,7 +191,7 @@
                     </button>
                   </div>
                   <div class="flex justify-start flex-wrap mt-4 w-full">
-                    <label class="block text-sm font-medium text-gray-400" for="City">Currancy</label>
+                    <label class="block text-sm font-medium text-gray-400" for="City">Currency</label>
                     <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm" id="City" name="City">
                       <option hidden disabled value></option>
                       <option selected>USD</option>
@@ -299,7 +299,7 @@
           <!-- Overlay-->
           <button class="md:hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all focus:outline-none js-stickyxb-overlay js-stickyxb-button"></button>
           <!-- Dropdown-->
-          <div class="absolute z-3 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
+          <div class="absolute z-5 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
             <div class="w-full">
               <!-- row-->
               <div class="flex items-center py-4 px-6 w-full">
@@ -307,12 +307,12 @@
                   <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/US - United States.svg" alt="US">
                 </div>
                 <div class="text-sm mr-3">United States</div>
-                <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currancy">Change</button>
+                <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currency">Change</button>
               </div>
             </div>
           </div>
           <!-- Button-->
-          <button class="z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
+          <button class="relative md:static z-4 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
             <div class="relative flex items-center rounded-sm overflow-hidden mr-3">
               <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/US - United States.svg" alt="US">
             </div>
@@ -376,7 +376,7 @@
   <!-- Overlay-->
   <button class="md:hidden fixed z-1 top-0 left-0 w-screen h-screen bg-black bg-opacity-75 opacity-0 pointer-events-none transition-all focus:outline-none js-stickyxb-overlay js-stickyxb-button"></button>
   <!-- Dropdown-->
-  <div class="absolute z-3 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
+  <div class="absolute z-5 bottom-full md:mb-2 flex flex-col bg-white py-2 w-full md:rounded-lg flex items-center md:border border-t border-gray-200 shadow-xl transform translate-y-2 opacity-0 pointer-events-none transition-all js-stickyxb-dropdown">
     <div class="w-full">
       <!-- row-->
       <div class="flex items-center py-4 px-6 w-full">
@@ -384,12 +384,12 @@
           <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/US - United States.svg" alt="US">
         </div>
         <div class="text-sm mr-3">United States</div>
-        <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currancy">Change</button>
+        <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currency">Change</button>
       </div>
     </div>
   </div>
   <!-- Button-->
-  <button class="z-2 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
+  <button class="relative md:static z-4 bg-white w-full p-6 md:rounded-lg flex items-center border-t md:border border-gray-300 focus:outline-none md:focus:ring-2 md:focus:ring-offset-2 md:focus:ring-offset-white md:focus:ring-blue-500 js-stickyxb-button">
     <div class="relative flex items-center rounded-sm overflow-hidden mr-3">
       <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/US - United States.svg" alt="US">
     </div>

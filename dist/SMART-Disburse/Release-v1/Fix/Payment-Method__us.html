@@ -131,7 +131,7 @@
             <div class="name span text text-gray-700 text-sm leading-5 font-medium">United States</div>
           </div>
         </div>
-        <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currancy">Change destination</button>
+        <button class="text-sm text-blue-600 hover:text-blue-500 ml-auto rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-500 open-change-currency">Change destination</button>
       </div>
       <div class="info text-center">
         <div class="info__title">
@@ -144,10 +144,10 @@
       </div>
     </section>
   </div>
-  <div class="modal modal-summary modal-change-currancy fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="modal modal-summary modal-change-currency fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="flex items-center justify-center min-h-screen py-4 px-4 text-center sm:block sm:p-0">
       <div class="fixed inset-0 backdrop-filter backdrop-blur bg-black bg-opacity-75 transition-opacity" aria-hidden="true"></div><span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">​</span>
-      <div class="inline-block align-bottom bg-white rounded-lg p-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:my-8 sm:align-middle sm:max-w-sm sm:w-full w-full sm:p-6 md:px-4">
+      <div class="inline-block align-bottom bg-white rounded-lg p-4 text-left overflow-hidden shadow-xl transform transition-all md:min-w-lg sm:align-middle sm:max-w-sm sm:w-full w-full">
         <div class="close p-3 w-12 h-12 cursor-pointer">
           <svg class="text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -161,15 +161,15 @@
           <div class="flex items-center flex-wrap mt-6 mb-3 border-gray-300 rounded-lg border py-6 px-4">
             <div class="flex justify-start flex-wrap w-full">
               <label class="block text-sm font-medium text-gray-700" for="City">Country</label>
-              <button class="flex items-center mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md relative shadow-sm focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm" id="country-dropdown" name="country-dropdown">
+              <button class="flex items-center mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md relative shadow-sm focus:ring-primary-light-blue focus:border-primary-light-blue" id="country-dropdown" name="country-dropdown">
                 <div class="relative flex items-center rounded-sm overflow-hidden">
                   <div class="absolute w-full h-full rounded-sm ring-1 ring-black ring-inset ring-opacity-10"></div><img class="w-5" src="../../img/flags/US - United States.svg" alt="US">
-                </div><span class="ml-3 text-base text-gray-900 sm:text-sm">United States</span>
+                </div><span class="ml-3 text-base text-gray-900">United States</span>
               </button>
             </div>
             <div class="flex justify-start flex-wrap mt-4 w-full">
-              <label class="block text-sm font-medium text-gray-400" for="City">Currancy</label>
-              <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm" id="Currancy" name="Currancy">
+              <label class="block text-sm font-medium text-gray-400" for="City">Currency</label>
+              <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base shadow-sm bg-gray-100 border-gray-300 rounded-md text-gray-400 focus:outline-none focus:ring-primary-light-blue focus:border-primary-light-blue" id="Currency" name="Currency">
                 <option>USD</option>
               </select>
             </div>
