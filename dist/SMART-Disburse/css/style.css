@@ -327,10 +327,6 @@ select,
   background-repeat: no-repeat;
 }
 
-#country-dropdown:focus {
-  outline: 1px solid #2f68ed;
-}
-
 #country-mini {
   background-position: right 8px center;
 }

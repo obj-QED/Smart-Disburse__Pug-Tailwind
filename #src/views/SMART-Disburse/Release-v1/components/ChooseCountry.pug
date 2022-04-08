@@ -1,5 +1,3 @@
-include Flag
-
 mixin ChooseCountry(country)
   -
     const mapCountries = {
@@ -68,26 +66,58 @@ mixin ChooseCountry(country)
               | Sending your money to
             .text.text-sm.leading-5.font-normal.text-gray-500.mt-2 Please select the country where you want to receive your <b>[PaymentTypeText]</b> and a supported currency
           .flex.items-center.flex-wrap.mt-6.mb-3.border-gray-300.rounded-lg.border.py-6.px-4
-            .flex.justify-start.flex-wrap.w-full
-              label.block.text-sm.font-medium.text-gray-700(for='City') Country
-              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
+            +Select({
+              label: 'Country',
+              flag: mapCountries[country].fieldCountry.img,
+              items: [
+                {
+                  label: mapCountries[country].fieldCountry.name,
+                  value: 'US',
+                  selected: true,
+                },
+              ]
+            })(
+              id="country-choosed"
+              class="w-full mb-4"
+            )
 
-                +Flag(mapCountries[country].fieldCountry.img, country)
-                div.text-base.text-gray-900.h-6.ml-3= mapCountries[country].fieldCountry.name
 
-            .flex.justify-start.flex-wrap.mt-4.w-full
-              label.block.text-sm.font-medium.text-gray-400(for='City') Currency
-              +select()
+            +Select({
+              label: 'Currency',
+              items: [
+                {
+                  label: 'USD',
+                  value: 'usd',
+                  selected: !country || country === 'US'
+                },
+                {
+                  label: 'EUR',
+                  value: 'eur',
+                  selected: country === 'IT'
+                },
+                {
+                  label: 'AUD',
+                  value: 'aud',
+                  selected: country === 'AU'
+                },
+              ]
+            })(
+              id="currency-choosed"
+              class=[
+                'w-full',
+                country !== 'US' && 'mb-4'
+              ]
+              disabled
+            )
 
             if country == 'AU'
-              .flex.justify-start.flex-wrap.mt-4.w-full
+              .flex.justify-start.flex-wrap.w-full.mb-4
                 label.mb-1.block.text-sm.font-medium.text-gray-700(for='address_line_1')
                   | Branch ID
                 .relative(class='sm:col-span-2 w-full')
                   input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md.placeholder-gray-300(type='text' name='first_name' placeholder=mapCountries[country].branchId.placeholder  autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
 
-            if country == 'AU'
-              .flex.line-input.relative.w-full.flex-wrap.mt-4
+              .flex.line-input.relative.w-full.flex-wrap.mb-4
                 label.mb-1.block.text-sm.font-medium.text-gray-700 [FieldName]
                 .relative.w-full
                   input#first_name.w-full.block.inputdow-sm.border-red-300.rounded-md(type='text' placeholder="000-000" name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 focus:text-gray-900')
@@ -98,22 +128,37 @@ mixin ChooseCountry(country)
                   | [FieldName] is required.
 
             if country == 'IT'
-              .flex.justify-start.flex-wrap.w-full.mt-4
-              label.block.text-sm.font-medium.text-gray-700(for='City') Bank
-              button#country-dropdown.flex.items-center.mt-1.block.w-full.pl-3.pr-10.py-2.border.border-gray-300.rounded-md.relative.shadow-sm(name='country-dropdown' class='focus:ring-primary-light-blue focus:border-primary-light-blue')
-                div.text-base.text-gray-900.h-6= mapCountries[country].Bank.fieldBankItaly.name
+              +Select({
+                label: 'Bank',
+                items: [
+                  {
+                    label: 'Bank of Italy',
+                    value: 'BoI',
+                  },
+                ]
+              })(
+                id="country-choosed"
+                class="w-full mb-4"
+              )
 
-            if country == 'IT'
-              .flex.justify-start.flex-wrap.line-input.relative.w-full.mt-4
-                label.block.text-sm.font-medium.text-gray-700(for='City') Bank
-                .relative.w-full.mt-1
-                  button#country-dropdown.flex.items-center.block.w-full.pl-3.pr-10.py-2.border.border-red-300.rounded-md.relative.shadow-sm(type='text' name='first_name' autocomplete='given-name' class='focus:ring-red-500 focus:border-red-500 focus:text-red-900')
-                    div.text-base.text-gray-900.h-6
-                  .absolute.right-5.inset-y-0.pr-3.flex.items-center.pointer-events-none
-                    svg.h-5.w-5.text-red-500(x-description='Heroicon name: solid/exclamation-circle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
-                      path(fill-rule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z' clip-rule='evenodd')
-                .w-full.text-xs.leading-4.font-normal.mt-1.text-red-900
-                  | Bank selection is required.
+              +Select({
+                label: 'Bank',
+                error: 'Bank selection is required.',
+                items: [
+                  {
+                    label: '',
+                    value: '0',
+                    selected: true,
+                  },
+                  {
+                    label: 'Bank of Italy',
+                    value: 'BoI',
+                  },
+                ]
+              })(
+                id="country-choosed"
+                class="w-full mb-4"
+              )
 
           .mt-9
             button.btn-step-next.px-6.py-4.w-full.shadow-form.text-base.font-medium.text-white.rounded-lg.text-white.text-white(class='bg-btn-form hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary-light-blue m-auto block' type='button')

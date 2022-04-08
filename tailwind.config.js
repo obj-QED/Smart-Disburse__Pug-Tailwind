@@ -9,6 +9,11 @@ module.exports = {
   // presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extends: {
+      padding: {
+        '11': '2.75rem'
+      }
+    },
     screens: {
       xxsm: "300px",
       xsm: "360px",
