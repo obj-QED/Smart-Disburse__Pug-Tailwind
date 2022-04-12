@@ -51,8 +51,6 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               span.relative.block.w-2.h-2.bg-gray-200.rounded-full
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
-        +ChangeMoney('US')
-        include ../#parts/default-country.pug
 
         .info
           +info__title()
@@ -86,7 +84,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 option EU
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='postal')
-                span.mr-1 Postal / ZIP Code
+                span.mr-1 ZIP Code
               .relative(class='sm:col-span-2 w-full')
                 input#input.w-full.block.w-full.shadow-sm.border-gray-300.rounded-md(type='text' name='first_name' autocomplete='given-name' class='focus:ring-primary-light-blue focus:border-primary-light-blue sm:text-sm')
 
@@ -146,4 +144,5 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
   include ../#includes/footer.pug
 
 +StickyXb('US')(class="md:hidden")
+include ../#parts/default-country.pug
 include ../#includes/scripts.pug

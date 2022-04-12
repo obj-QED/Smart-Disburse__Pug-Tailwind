@@ -43,9 +43,6 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               span.relative.block.w-2.h-2.bg-gray-200.rounded-full
             span.ml-2.text-sm.font-medium.leading-4.text-gray-800 Summary
 
-        +ChangeMoney('US')
-        include ../#parts/default-country.pug
-
         .info
           +info__title()
             span Enter Your
@@ -72,6 +69,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 | Account Holder Name
               .relative(class='sm:col-span-2 w-full')
                 input#holder-name.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='holder-name' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
+
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='routing_number')
                 | Routing Number
@@ -79,11 +77,18 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
                 input#routing_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='routing_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
                 .ml-2(class="md:hidden block")
                   img(src="../../img/card-action.svg" alt="" srcset="")
+
             .flex.justify-start.flex-wrap.mt-4
               label.mb-1.block.text-sm.font-medium.text-gray-700(for='account_number')
                 | Account Number
               .relative(class='sm:col-span-2 w-full')
                 input#account_number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='account_number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
+
+            .flex.justify-start.flex-wrap.mt-4
+              label.mb-1.block.text-sm.font-medium.text-gray-700(for='verify-account-number')
+                | Verify Account Number
+              .relative(class='sm:col-span-2 w-full')
+                input#verify-account-number.py-2.px-3.block.w-full.shadow-sm.border.border-gray-300.rounded-md.text-gray-800(type='text' name='verify-account-number' autocomplete='given-name' class=' focus:outline-none focus:ring-1 focus:ring-primary-light-blue focus:border-primary-light-blue text-base font-normal leading-6 text-gray-900 placeholder-gray-300')
 
 
       .w-full.pt-8.pb-6(class="md:pb-0 md:mt-0 mt-4")
@@ -109,4 +114,5 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
   include ../#includes/footer.pug
 
 +StickyXb('US')(class="md:hidden")
+include ../#parts/default-country.pug
 include ../#includes/scripts.pug

@@ -44,7 +44,7 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
             span One <b class="font-semibold">Final Step</b>
           +info__content()
             span Make sure all the details are accurate
-        .balance.mt-6.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative
+        .balance.mt-6.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative.pb-4
           .text.uppercase.text-blue-200.text-xs.leading-5.font-medium.pt-6.ww-full Payment Amount
           .cash.font-normal.text-5xl.text-white.py-3.w-full $1,734<span class="opacity-50">.58</span>
           .company.bg-blue-800.rounded-14p.mb-3.mt-3.cursor-default.leading-5(class="flex items-center xsm:justify-start justify-center xsm:flex-nowrap flex-wrap xxsm:p-0 xsm:py-1 xsm:pl-4 xsm:pr-1")
@@ -53,7 +53,10 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative.bg-gray-100
               svg.text-white.mr-1(class='w-3.5 h-3.5 group-hover:text-indigo-800' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
                 path(fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd')
               |   Up to 3 Days
-          include ../#parts/info-amount
+
+        .flex.justify-center.mt-9
+          button.js-open-modal.inline-flex.items-center.border.border-transparent.text-sm.font-medium.rounded-md.text-primary-blue(type='button' class='p-2.5 hover:opacity-90 focus:outline-none')
+            span I want my  <b class="font-semibold"> money faster</b>!
         .summary__info.pt-9
           .inline-flex.items-center.rounded-md.bg-gray-50.mb-3.w-full.py-5.px-6(class="hover:bg-gray-100")
             .w-full
@@ -102,13 +105,13 @@ include ../#includes/scripts.pug
 
 script.
   $('#push_inst').on('click', function(){
-    $(this).parent().addClass('bg-blue-50 border-2 border-blue-600').removeClass('bg-gray-50')
-    $('#push_route').parent().removeClass('bg-blue-50 border-2 border-blue-600').addClass('bg-gray-50')
+    $(this).parent().addClass('bg-blue-50 ring-2 ring-blue-600').removeClass('bg-gray-50')
+    $('#push_route').parent().removeClass('bg-blue-50 ring-2 ring-blue-600').addClass('bg-gray-50')
     $('.btn-confirm').addClass('shadow-form bg-btn-form text-white').removeClass('bg-gray-200 text-gray-400')
   })
 
   $('#push_route').on('click', function(){
-    $(this).parent().addClass('bg-blue-50 border-2 border-blue-600').removeClass('bg-gray-50')
-    $('#push_inst').parent().removeClass('bg-blue-50 bg-gray-50 border-2 border-blue-600').addClass('bg-gray-50')
+    $(this).parent().addClass('bg-blue-50 ring-2 ring-blue-600').removeClass('bg-gray-50')
+    $('#push_inst').parent().removeClass('bg-blue-50 bg-gray-50 ring-2 ring-blue-600').addClass('bg-gray-50')
     $('.btn-confirm').addClass('shadow-form bg-btn-form text-white').removeClass('bg-gray-200 text-gray-400')
   })
