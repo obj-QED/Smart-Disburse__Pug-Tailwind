@@ -2446,6 +2446,10 @@ select {
   letter-spacing: -0.025em;
 }
 
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-transparent {
   color: transparent;
 }

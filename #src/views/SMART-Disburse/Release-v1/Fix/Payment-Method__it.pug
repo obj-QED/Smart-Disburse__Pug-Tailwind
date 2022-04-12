@@ -26,12 +26,20 @@ body.max-w-screen-lg.m-auto.font-inter.container.relative(class="md:bg-bgray-100
     include ../#parts/navigation-step.pug
 
     section.content.bg-white.rounded-tl-20p.rounded-tr-20p.pt-9.px-4(class="md:rounded-none md:w-8/12 md:p-14 md:min-h-full md:pb-10")
-      .balance.bg-balance.rounded-16p.shadow-2xl.flex.justify-center.items-center.text-center.flex-wrap.relative
+      .balance.bg-balance.rounded-16p.shadow-2xl.flex.flex-col.justify-center.items-center.text-center.flex-wrap.relative
         .text.uppercase.text-blue-200.text-sm.font-medium.pt-6.ww-full.leading-5 Your amount
-        .cash.font-normal.text-5xl.text-white.py-3.w-full $1,734 <span class="opacity-50">.58</span>
-        .company.bg-blue-800.rounded-14p.py-1.px-4.mb-7.mt-3.cursor-pointer.leading-5
-          span.text-blue-400.text-xs.font-medium.pr-1 from
+        .cash.font-normal.text-5xl.text-white.py-3.w-full $1,734<span class="opacity-50">.58</span>
+        .company.bg-blue-800.rounded-14p.py-1.px-4.mb-3.mt-3.cursor-pointer.leading-5
+          span.text-blue-400.text-xs.font-medium.pr-1.uppercase.tracking-wider from
           span.text-white.text-sm.font-normal [Your company]
+        .info-amount.rounded-md.p-2.w-full.bg-blue-800.bg-opacity-50.mx-4.mb-4.w-310px(class="text-sm leading-5 font-medium")
+          .inline-flex.justify-between.w-full(class="mb-2.5")
+            span.text-blue-400 Originating amount:
+            span.text-blue-200 $1,734.58
+          .inline-flex.justify-between.w-full
+            span.text-blue-400 Conversion rate:
+            span.text-blue-200 1 USD = 0.88 EUR
+
       .btn-block.text-sm.font-medium.text-black.my-9.flex.justify-between.items-center
         .message.cursor-pointer.bg-gray-50.flex.items-center(class="rounded-full p-2.5 md:w-2/6 md:w-1/3 md:justify-center md:py-2.5 hover:bg-gray-100 md:mr-2")
           svg.h-4.w-4.text-blue-500(class="mr-1.5" xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
